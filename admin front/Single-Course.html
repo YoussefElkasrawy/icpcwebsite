@@ -228,10 +228,16 @@
                             <!-- end col -->
                             <div class="col-md-6">
                                 <div class="breadcrumb-wrapper">
-                                    <a href="" class="main-btn primary-btn btn-hover btn-sm">
-                                        <i class="lni lni-plus mr-5"></i>
-                                        New Course
-                                    </a>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a>Courses</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                Lecture
+                                            </li>
+                                        </ol>
+                                    </nav>
                                 </div>
                             </div>
                             <!-- end col -->
@@ -316,12 +322,6 @@
                                 <div class="client-profile-photo">
                                     <div class="image">
                                         <img src="./uploads/employees/emp-def8b17e-7546-4b28-b6c1-698e07fa1c6d-1703190177474.jpeg" alt="profile">
-                                        <div class="update-image">
-                                            <input type="file">
-                                            <label for="">
-                                                <i class="lni lni-camera"></i>
-                                            </label>
-                                        </div>
                                     </div>
                                     <div class="profile-meta text-center pt-100">
                                         <h5 class="text-bold mb-10">Name</h5>
@@ -359,236 +359,65 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="card-style clients-table-card mb-30">
-                                <div class="title d-flex justify-content-between align-items-center">
-                                    <h6 class="mb-10">Clients</h6>
-                                    <div class="more-btn-wrapper">
-                                        <button
-                                            class="more-btn dropdown-toggle"
-                                            id="moreAction"
-                                            data-bs-toggle="dropdown"
-                                            aria-expanded="false"
-                                        >
-                                            <i class="lni lni-more-alt"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
-                                            <li class="dropdown-item">
-                                                <a href="#0" class="text-gray">Mark as Read</a>
+                            <div class="card-style mb-30">
+                                <div class="title d-flex flex-wrap align-items-center justify-content-between">
+                                    <div class="left">
+                                        <div class=" d-md-flex table-search">
+                                            <form action="#">
+                                                <input type="search" id="search" placeholder="Search...">
+                                                <button>
+                                                        <i class="lni lni-search-alt"></i>
+                                                    </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <button class="main-btn dark-btn btn-hover" data-bs-toggle="dropdown">
+                                                <i class="lni lni-exit-up"></i>
+                                                Export
+                                            </button>
+                                        <ul class="dropdown-menu text-center">
+                                            <li>
+                                                <a href="">
+                                                    <i class="lni lni-printer"></i> Print
+                                                </a>
                                             </li>
-                                            <li class="dropdown-item">
-                                                <a href="#0" class="text-gray">Reply</a>
+                                            <li>
+                                                <a href="">
+                                                    <i class="lni lni-remove-file"></i> PDF
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <i class="lni lni-printer"></i> Print
+                                                </a>
                                             </li>
                                         </ul>
+                                        <button class="main-btn primary-btn btn-hover" onclick="openAddPopupForm()">
+                                                <i class="lni me-2 lni-plus"></i>
+                                                Add Lecture
+                                            </button>
                                     </div>
                                 </div>
-                                <div class="table-wrapper table-responsive">
-                                    <table class="table clients-table">
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <h6>#</h6>
-                                                </th>
-                                                <th>
-                                                    <h6>Name</h6>
-                                                </th>
-                                                <th>
-                                                    <h6>Email</h6>
-                                                </th>
-                                                <th>
-                                                    <h6>Project</h6>
-                                                </th>
-                                                <th>
-                                                    <h6>Status</h6>
-                                                </th>
-                                                <th>
-                                                    <h6>Action</h6>
-                                                </th>
-                                            </tr>
-                                            <!-- end table row-->
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="employee-image">
-                                                        <img src="assets/images/lead/lead-1.png" alt="">
-                                                    </div>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>Esther Howard</p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>
-                                                        <a href="#0">yourmail@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>Admin Dashboard Design</p>
-                                                </td>
-                                                <td>
-                                                    <span class="status-btn active-btn">Active</span>
-                                                </td>
-                                                <td>
-                                                    <div class="action">
-                                                        <button class="text-danger">
-                                                            <i class="lni lni-trash-can"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <!-- end table row -->
-                                            <tr>
-                                                <td>
-                                                    <div class="employee-image">
-                                                        <img src="assets/images/lead/lead-2.png" alt="">
-                                                    </div>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>John Doe</p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>
-                                                        <a href="#0">yourmail@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>Dashboard Design</p>
-                                                </td>
-                                                <td>
-                                                    <span class="status-btn success-btn">Done</span>
-                                                </td>
-                                                <td>
-                                                    <div class="action">
-                                                        <button class="text-danger">
-                                                            <i class="lni lni-trash-can"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <!-- end table row -->
-                                            <tr>
-                                                <td>
-                                                    <div class="employee-image">
-                                                        <img src="assets/images/lead/lead-3.png" alt="">
-                                                    </div>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>Anee Smith</p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>
-                                                        <a href="#0">yourmail@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>Bootstrap Template</p>
-                                                </td>
-                                                <td>
-                                                    <span class="status-btn active-btn">Active</span>
-                                                </td>
-                                                <td>
-                                                    <div class="action">
-                                                        <button class="text-danger">
-                                                            <i class="lni lni-trash-can"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <!-- end table row -->
-                                            <tr>
-                                                <td>
-                                                    <div class="employee-image">
-                                                        <img src="assets/images/lead/lead-4.png" alt="">
-                                                    </div>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>Jonathon</p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>
-                                                        <a href="#0">yourmail@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>React Template</p>
-                                                </td>
-                                                <td>
-                                                    <span class="status-btn warning-btn">Pending</span>
-                                                </td>
-                                                <td>
-                                                    <div class="action">
-                                                        <button class="text-danger">
-                                                            <i class="lni lni-trash-can"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <!-- end table row -->
-                                            <tr>
-                                                <td>
-                                                    <div class="employee-image">
-                                                        <img src="assets/images/lead/lead-5.png" alt="">
-                                                    </div>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>David Smith</p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>
-                                                        <a href="#0">yourmail@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>Tailwindcss Template</p>
-                                                </td>
-                                                <td>
-                                                    <span class="status-btn close-btn">Close</span>
-                                                </td>
-                                                <td>
-                                                    <div class="action">
-                                                        <button class="text-danger">
-                                                            <i class="lni lni-trash-can"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <!-- end table row -->
-                                            <tr>
-                                                <td>
-                                                    <div class="employee-image">
-                                                        <img src="assets/images/lead/lead-6.png" alt="">
-                                                    </div>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>Anna Smith</p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>
-                                                        <a href="#0">yourmail@gmail.com</a>
-                                                    </p>
-                                                </td>
-                                                <td class="min-width">
-                                                    <p>Admin Dashboard Design</p>
-                                                </td>
-                                                <td>
-                                                    <span class="status-btn active-btn">Active</span>
-                                                </td>
-                                                <td>
-                                                    <div class="action">
-                                                        <button class="text-danger">
-                                                            <i class="lni lni-trash-can"></i>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <!-- end table row -->
-                                        </tbody>
-                                    </table>
-                                    <!-- end table -->
+                                <br>
+                                <!-- End Title -->
+                                <div class="table-responsive">
+                                    <table id="mytable" class="table top-selling-table"></table>
+                                    <!-- End Table -->
+                                    <br>
+                                    <div class="title d-flex flex-wrap align-items-center justify-content-between">
+                                        <div class="left" id="countdata"></div>
+                                        <div class="right">
+                                            <!-- Pagination controls -->
+                                            <div class="pagination-container">
+                                                <ul class="pagination"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- end card -->
                         </div>
-                        <!-- end col -->
+                        <!-- End Col -->
                     </div>
                 </section>
                 <!-- ========== section end ========== -->
@@ -731,5 +560,192 @@
             <script src="./public/js/polyfill.js"></script>
             <script src="./public/js/main.js"></script>
             <script src="./public/js/popup/course.js"></script>
+            <script>
+                let array = [];
+                let tarraycount = array.length;
+                const pageSize = 7;
+                let currentPage = 1;
+        
+                function showtable(curarray, currentPage, pageSize) {
+                    let table = document.getElementById("mytable");
+                    let arraycount = curarray.length;
+        
+                    let startIndex = (currentPage - 1) * pageSize;
+                    let endIndex = Math.min(startIndex + pageSize, arraycount);
+        
+                    let tableHTML = `
+                    <thead class="table-bordered">
+                      <tr>
+                        <th>
+                            <h6 class="text-sm text-medium">Video</h6>
+                        </th>
+                        <th>
+                          <h6 class="text-sm text-medium">Title</h6>
+                        </th>
+                        <th>
+                          <h6 class="text-sm text-medium text-end">Views</h6>
+                        </th>
+                        <th>
+                            <h6 class="text-sm text-medium text-end">Actions</h6>
+                          </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                  `;
+        
+                    if (curarray.length === 0) {
+                        tableHTML += `<tr><td colspan="4"><span>Not Found!</span></td></tr>`;
+                    } else {
+                        for (let i = startIndex; i < endIndex; i++) {
+                            tableHTML += `
+                        <tr>
+                          <td>
+                            <div class="product">
+                              <div class="image">
+                                <iframe
+                                                            class="card-img"
+                                                            width="220"
+                                                            height="140"
+                                                            src="https://www.youtube.com/embed/cCTh9MuZ5lw?si=ft9-Zd7jy6LCIZi5"
+                                                            title="YouTube video player"
+                                                            frameborder="0"
+                                                            allow="accelerometer; gyroscope; picture-in-picture; web-share"
+                                                            allowfullscreen="false"
+                                                        ></iframe>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-sm">${curarray[i].name}</p>
+                          </td>
+                          <td>
+                            <span class="status-btn success-btn-light">1000</span>
+                          </td>
+                          <td>
+                            <div class="action justify-content-end">
+                              <button class="edit" onclick="openEditPopupForm()">
+                                <i class="lni lni-pencil"></i>
+                              </button>
+                              <button class="edit" onclick="openViewPopupForm()">
+                                <i class="lni lni-eye"></i>
+                              </button>
+                              <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="lni lni-more-alt"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
+                                <li class="dropdown-item">
+                                  <form method="post" action="/admin/user/delete-employee">
+                                    <input type="hidden" name="_id" value="${curarray[i]._id}">
+                                    <button type="submit"><a class="text-gray">Remove</a></button>
+                                  </form>
+                                </li>
+                              </ul>
+                            </div>
+                          </td>
+                        </tr>
+                      `;
+                        }
+                    }
+        
+                    tableHTML += `</tbody>`;
+                    table.innerHTML = tableHTML;
+                    document.getElementById("countdata").innerHTML = `<p>Showing ${endIndex - startIndex} of ${tarraycount} entries</p>`;
+                }
+        
+                var newarray = array;
+                document.getElementById("search").addEventListener("keyup", function() {
+                    var search = this.value;
+                    newarray = array.filter(function(val) {
+                        if (val.name.includes(search) || val.jobTitle.includes(search) || val.role.includes(search)) {
+                            var newobj = {
+                                _id: val._id,
+                                image: val.image,
+                                name: val.name,
+                                jobTitle: val.jobTitle,
+                                role: val.role,
+                                linkedin: val.linkedin,
+                                instgram: val.instgram,
+                                facebook: val.facebook
+                            }
+                            return newobj;
+                        }
+                    });
+                    currentPage = 1;
+                    let tPages = Math.ceil(newarray.length / pageSize);
+                    showtable(newarray, currentPage, pageSize);
+                    setupPagination(tPages, newarray);
+                });
+        
+                function setupPagination(totalPages, curPage) {
+                    const maxPagesToShow = 7;
+                    const paginationContainer = document.querySelector(".pagination-container");
+        
+                    let startPage = Math.max(1, curPage - Math.floor(maxPagesToShow / 2));
+                    let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+        
+                    if (endPage - startPage + 1 < maxPagesToShow) {
+                        startPage = Math.max(1, endPage - maxPagesToShow + 1);
+                    }
+        
+                    let paginationHTML = '<ul class="pagination">';
+        
+                    // "Previous" button
+                    paginationHTML += `
+                    <li>
+                      <a class="light-btn btn-hover ${curPage === 1 ? 'disabled' : ''}" onclick="changePage('prev')">
+                        Previous
+                      </a>
+                    </li>
+                  `;
+        
+                    // Page numbers with ellipsis
+                    for (let i = startPage; i <= endPage; i++) {
+                        paginationHTML += `
+                      <li>
+                        <a class="btn-hover ${curPage === i ? 'primary-btn' : 'light-btn'}" onclick="changePage(${i})">${i}</a>
+                      </li>
+                    `;
+                    }
+        
+                    if (endPage < totalPages) {
+                        paginationHTML += '<li><span>...</span></li>';
+                        paginationHTML += `
+                      <li>
+                        <a class="btn-hover ${curPage === totalPages ? 'primary-btn' : 'light-btn'}" onclick="changePage(${totalPages})">${totalPages}</a>
+                      </li>
+                    `;
+                    }
+        
+                    // "Next" button
+                    paginationHTML += `
+                    <li>
+                      <a class="light-btn btn-hover ${curPage === totalPages ? 'disabled' : ''}" onclick="changePage('next')">
+                        Next
+                      </a>
+                    </li>
+                  `;
+        
+                    paginationHTML += '</ul>';
+        
+                    paginationContainer.innerHTML = paginationHTML;
+                }
+        
+                function changePage(page) {
+                    if (page === 'prev' && currentPage > 1) {
+                        currentPage--;
+                    } else if (page === 'next' && currentPage < totalPages) {
+                        currentPage++;
+                    } else if (typeof page === 'number' && page >= 1 && page <= totalPages) {
+                        currentPage = page;
+                    }
+        
+                    showtable(newarray, currentPage, pageSize);
+                    setupPagination(Math.ceil(newarray.length / pageSize), currentPage);
+                }
+                
+                let totalPages = Math.ceil(array.length / pageSize);
+                showtable(array, currentPage, pageSize);
+                setupPagination(totalPages, currentPage);
+            </script>
         </body>
     </html>
