@@ -238,184 +238,346 @@
                         </div>
                         <!-- end row -->
                     </div>
-                    <!-- ========== title-wrapper end ========== -->
-                    <div class="tab-style-1 card-style mb-30">
-                        <nav class="nav" id="nav-tab" role="tablist">
-                            <button
-                                class="active"
-                                id="tab-1-1"
-                                data-bs-toggle="tab"
-                                data-bs-target="#tabContent-1-1"
-                                aria-selected="true"
-                                role="tab"
-                            >
-                                Courses
-                            </button>
-                        </nav>
-                        <div class="tab-content" id="nav-tabContent1">
-                            <div
-                                class="tab-pane fade active show"
-                                id="tabContent-1-1"
-                                role="tabpanel"
-                                aria-labelledby="#tab-1-1"
-                            >
+                    <div class="row">
+                        <div class="col-xxl-8 col-lg-8">
+                            <div class="card-style mb-30">
+                                <div>
+                                    <iframe
+                                        class="card-img"
+                                        width="500"
+                                        height="500"
+                                        src="https://www.youtube.com/embed/cCTh9MuZ5lw?si=ft9-Zd7jy6LCIZi5"
+                                        title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen="false"
+                                    ></iframe>
+                                </div>
+                                <hr>
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="input-style-1">
+                                                <label> Name</label>
+                                                <input type="text" placeholder="Name" name="name">
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-12">
+                                            <div class="input-style-1">
+                                                <label>Youtube Intro Video Code</label>
+                                                <input type="text" placeholder="Youtube Intro Video Code" name="introVideoCode">
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-12">
+                                            <div class="select-style-1">
+                                                <label>Trainer</label>
+                                                <div class="select-position">
+                                                    <select name="employeeId">
+                                                        <option value="1">Test 1</option>
+                                                        <option value="2">Test 2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-12">
+                                            <div class="mb-30">
+                                                <div class="form-check form-switch toggle-switch mb-30">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="checkbox"
+                                                        id="toggleSwitch1"
+                                                        name="hidden"
+                                                    >
+                                                    <label class="form-check-label" for="toggleSwitch1">Hidden</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <!-- end col -->
+                                        <div class="col-12">
+                                            <div class="button-group d-flex justify-content-center flex-wrap">
+                                                <button class="main-btn primary-btn btn-hover w-100 text-center" type="submit">
+                                                    Update
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        <div class="col-xxl-4 col-lg-4">
+                            <div class="client-profile-wrapper mb-30">
+                                <div class="client-cover"></div>
+                                <div class="client-profile-photo">
+                                    <div class="image">
+                                        <img src="./uploads/employees/emp-def8b17e-7546-4b28-b6c1-698e07fa1c6d-1703190177474.jpeg" alt="profile">
+                                        <div class="update-image">
+                                            <input type="file">
+                                            <label for="">
+                                                <i class="lni lni-camera"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="profile-meta text-center pt-100">
+                                        <h5 class="text-bold mb-10">Name</h5>
+                                        <p class="text-sm">jobTitle</p>
+                                    </div>
+                                </div>
+                                <div class="client-info">
+                                    <div class="external-link mt-25">
+                                        <a href="#" class="link-item">
+                                            <div class="link-name">
+                                                <i class="lni lni-linkedin"></i>
+                                                <h6 class="fw-500">Linkedin</h6>
+                                            </div>
+                                            <i class="lni lni-chevron-right"></i>
+                                        </a>
+                                        <a href="#" class="link-item">
+                                            <div class="link-name">
+                                                <i class="lni lni-instagram"></i>
+                                                <h6 class="fw-500">Instgram</h6>
+                                            </div>
+                                            <i class="lni lni-chevron-right"></i>
+                                        </a>
+                                        <a href="#" class="link-item">
+                                            <div class="link-name">
+                                                <i class="lni lni-facebook"></i>
+                                                <h6 class="fw-500">Facebook</h6>
+                                            </div>
+                                            <i class="lni lni-chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-style clients-table-card mb-30">
+                                <div class="title d-flex justify-content-between align-items-center">
+                                    <h6 class="mb-10">Clients</h6>
+                                    <div class="more-btn-wrapper">
+                                        <button
+                                            class="more-btn dropdown-toggle"
+                                            id="moreAction"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <i class="lni lni-more-alt"></i>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                                            <li class="dropdown-item">
+                                                <a href="#0" class="text-gray">Mark as Read</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <a href="#0" class="text-gray">Reply</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="table-wrapper table-responsive">
-                                    <table class="table">
+                                    <table class="table clients-table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <h6>#</h6>
+                                                </th>
+                                                <th>
+                                                    <h6>Name</h6>
+                                                </th>
+                                                <th>
+                                                    <h6>Email</h6>
+                                                </th>
+                                                <th>
+                                                    <h6>Project</h6>
+                                                </th>
+                                                <th>
+                                                    <h6>Status</h6>
+                                                </th>
+                                                <th>
+                                                    <h6>Action</h6>
+                                                </th>
+                                            </tr>
+                                            <!-- end table row-->
+                                        </thead>
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <div class="card-yt">
-                                                        <iframe
-                                                            class="card-img"
-                                                            width="220"
-                                                            height="140"
-                                                            src="https://www.youtube.com/embed/cCTh9MuZ5lw?si=ft9-Zd7jy6LCIZi5"
-                                                            title="YouTube video player"
-                                                            frameborder="0"
-                                                            allow="accelerometer; gyroscope; picture-in-picture; web-share"
-                                                            allowfullscreen="false"
-                                                        ></iframe>
+                                                    <div class="employee-image">
+                                                        <img src="assets/images/lead/lead-1.png" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="min-width">
-                                                    <h4>Course Name</h4>
+                                                    <p>Esther Howard</p>
                                                 </td>
                                                 <td class="min-width">
-                                                    <h4>Youssef Gamal</h4>
+                                                    <p>
+                                                        <a href="#0">yourmail@gmail.com</a>
+                                                    </p>
                                                 </td>
                                                 <td class="min-width">
-                                                    <span class="status-btn success-btn-light">Not hidden</span>
+                                                    <p>Admin Dashboard Design</p>
                                                 </td>
                                                 <td>
-                                                    <a href="./Single-Course.html">
-                                                        <i class="lni lni-chevron-right"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <!-- end table row -->
-                                            <tr>
-                                                <td>
-                                                    <div class="card-yt">
-                                                        <iframe
-                                                            class="card-img"
-                                                            width="220"
-                                                            height="140"
-                                                            src="https://www.youtube.com/embed/cCTh9MuZ5lw?si=ft9-Zd7jy6LCIZi5"
-                                                            title="YouTube video player"
-                                                            frameborder="0"
-                                                            allow="accelerometer; gyroscope; picture-in-picture; web-share"
-                                                            allowfullscreen="false"
-                                                        ></iframe>
-                                                    </div>
-                                                </td>
-                                                <td class="min-width">
-                                                    <h4>Course Name</h4>
-                                                </td>
-                                                <td class="min-width">
-                                                    <h4>Youssef Gamal</h4>
-                                                </td>
-                                                <td class="min-width">
-                                                    <span class="status-btn success-btn-light">Not hidden</span>
+                                                    <span class="status-btn active-btn">Active</span>
                                                 </td>
                                                 <td>
                                                     <div class="action">
-                                                        <a href="./Single-Course.html">
-                                                            <i class="lni lni-chevron-right"></i>
-                                                        </a>
+                                                        <button class="text-danger">
+                                                            <i class="lni lni-trash-can"></i>
+                                                        </button>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <!-- end table row -->
                                             <tr>
                                                 <td>
-                                                    <div class="card-yt">
-                                                        <iframe
-                                                            class="card-img"
-                                                            width="220"
-                                                            height="140"
-                                                            src="https://www.youtube.com/embed/cCTh9MuZ5lw?si=ft9-Zd7jy6LCIZi5"
-                                                            title="YouTube video player"
-                                                            frameborder="0"
-                                                            allow="accelerometer; gyroscope; picture-in-picture; web-share"
-                                                            allowfullscreen="false"
-                                                        ></iframe>
+                                                    <div class="employee-image">
+                                                        <img src="assets/images/lead/lead-2.png" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="min-width">
-                                                    <h4>Course Name</h4>
+                                                    <p>John Doe</p>
                                                 </td>
                                                 <td class="min-width">
-                                                    <h4>Youssef Gamal</h4>
+                                                    <p>
+                                                        <a href="#0">yourmail@gmail.com</a>
+                                                    </p>
                                                 </td>
                                                 <td class="min-width">
-                                                    <span class="status-btn success-btn-light">Not hidden</span>
+                                                    <p>Dashboard Design</p>
                                                 </td>
                                                 <td>
-                                                    <a href="./Single-Course.html">
-                                                        <i class="lni lni-chevron-right"></i>
-                                                    </a>
+                                                    <span class="status-btn success-btn">Done</span>
+                                                </td>
+                                                <td>
+                                                    <div class="action">
+                                                        <button class="text-danger">
+                                                            <i class="lni lni-trash-can"></i>
+                                                        </button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <!-- end table row -->
                                             <tr>
                                                 <td>
-                                                    <div class="card-yt">
-                                                        <iframe
-                                                            class="card-img"
-                                                            width="220"
-                                                            height="140"
-                                                            src="https://www.youtube.com/embed/cCTh9MuZ5lw?si=ft9-Zd7jy6LCIZi5"
-                                                            title="YouTube video player"
-                                                            frameborder="0"
-                                                            allow="accelerometer; gyroscope; picture-in-picture; web-share"
-                                                            allowfullscreen="false"
-                                                        ></iframe>
+                                                    <div class="employee-image">
+                                                        <img src="assets/images/lead/lead-3.png" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="min-width">
-                                                    <h4>Course Name</h4>
+                                                    <p>Anee Smith</p>
                                                 </td>
                                                 <td class="min-width">
-                                                    <h4>Youssef Gamal</h4>
+                                                    <p>
+                                                        <a href="#0">yourmail@gmail.com</a>
+                                                    </p>
                                                 </td>
                                                 <td class="min-width">
-                                                    <span class="status-btn success-btn-light">Not hidden</span>
+                                                    <p>Bootstrap Template</p>
                                                 </td>
                                                 <td>
-                                                    <a href="./Single-Course.html">
-                                                        <i class="lni lni-chevron-right"></i>
-                                                    </a>
+                                                    <span class="status-btn active-btn">Active</span>
+                                                </td>
+                                                <td>
+                                                    <div class="action">
+                                                        <button class="text-danger">
+                                                            <i class="lni lni-trash-can"></i>
+                                                        </button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <!-- end table row -->
                                             <tr>
                                                 <td>
-                                                    <div class="card-yt">
-                                                        <iframe
-                                                            class="card-img"
-                                                            width="220"
-                                                            height="140"
-                                                            src="https://www.youtube.com/embed/cCTh9MuZ5lw?si=ft9-Zd7jy6LCIZi5"
-                                                            title="YouTube video player"
-                                                            frameborder="0"
-                                                            allow="accelerometer; gyroscope; picture-in-picture; web-share"
-                                                            allowfullscreen="false"
-                                                        ></iframe>
+                                                    <div class="employee-image">
+                                                        <img src="assets/images/lead/lead-4.png" alt="">
                                                     </div>
                                                 </td>
                                                 <td class="min-width">
-                                                    <h4>Course Name</h4>
+                                                    <p>Jonathon</p>
                                                 </td>
                                                 <td class="min-width">
-                                                    <h4>Youssef Gamal</h4>
+                                                    <p>
+                                                        <a href="#0">yourmail@gmail.com</a>
+                                                    </p>
                                                 </td>
                                                 <td class="min-width">
-                                                    <span class="status-btn success-btn-light">Not hidden</span>
+                                                    <p>React Template</p>
                                                 </td>
                                                 <td>
-                                                    <a href="./Single-Course.html">
-                                                        <i class="lni lni-chevron-right"></i>
-                                                    </a>
+                                                    <span class="status-btn warning-btn">Pending</span>
+                                                </td>
+                                                <td>
+                                                    <div class="action">
+                                                        <button class="text-danger">
+                                                            <i class="lni lni-trash-can"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- end table row -->
+                                            <tr>
+                                                <td>
+                                                    <div class="employee-image">
+                                                        <img src="assets/images/lead/lead-5.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="min-width">
+                                                    <p>David Smith</p>
+                                                </td>
+                                                <td class="min-width">
+                                                    <p>
+                                                        <a href="#0">yourmail@gmail.com</a>
+                                                    </p>
+                                                </td>
+                                                <td class="min-width">
+                                                    <p>Tailwindcss Template</p>
+                                                </td>
+                                                <td>
+                                                    <span class="status-btn close-btn">Close</span>
+                                                </td>
+                                                <td>
+                                                    <div class="action">
+                                                        <button class="text-danger">
+                                                            <i class="lni lni-trash-can"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- end table row -->
+                                            <tr>
+                                                <td>
+                                                    <div class="employee-image">
+                                                        <img src="assets/images/lead/lead-6.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="min-width">
+                                                    <p>Anna Smith</p>
+                                                </td>
+                                                <td class="min-width">
+                                                    <p>
+                                                        <a href="#0">yourmail@gmail.com</a>
+                                                    </p>
+                                                </td>
+                                                <td class="min-width">
+                                                    <p>Admin Dashboard Design</p>
+                                                </td>
+                                                <td>
+                                                    <span class="status-btn active-btn">Active</span>
+                                                </td>
+                                                <td>
+                                                    <div class="action">
+                                                        <button class="text-danger">
+                                                            <i class="lni lni-trash-can"></i>
+                                                        </button>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             <!-- end table row -->
@@ -424,7 +586,9 @@
                                     <!-- end table -->
                                 </div>
                             </div>
+                            <!-- end card -->
                         </div>
+                        <!-- end col -->
                     </div>
                 </section>
                 <!-- ========== section end ========== -->

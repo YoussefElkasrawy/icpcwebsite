@@ -5020,11 +5020,11 @@ h6,
 }
 .client-profile-wrapper .client-profile-photo {
   position: relative;
-  margin-top: -80px;
+  margin-top: -100px;
 }
 @media (max-width: 767px) {
   .client-profile-wrapper .client-profile-photo {
-    margin-top: -50px;
+    margin-top: -80px;
   }
 }
 .client-profile-wrapper .client-profile-photo .image {
@@ -5044,7 +5044,7 @@ h6,
 }
 .client-profile-wrapper .client-profile-photo .image img {
   width: 100%;
-  border-radius: 50%;
+  border-radius: 5%;
 }
 .client-profile-wrapper .client-profile-photo .image .update-image {
   position: absolute;
