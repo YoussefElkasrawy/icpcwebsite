@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ======== Head start =========== -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./public/images/logo.png" type="image/x-icon">
+    <title>Admins</title>
+    <!-- ========== All CSS files linkup ========= -->
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/lineicons.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./public/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./public/css/fullcalendar.css">
+    <link rel="stylesheet" href="./public/css/fullcalendar.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+</head>
+<!-- ======== Head end =========== -->
+
+<body>
+    <!-- ======== Preloader start =========== -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- ======== Preloader end =========== -->
+    <!-- ======== sidebar-nav start =========== -->
+    <aside id="zsidebar" class="sidebar-nav-wrapper">
+        <div class="navbar-logo">
+            <a href="index.html">
+                <img src="./public/images/logo.png" alt="logo" height="100">
+            </a>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <!--DASHBOARD-->
+                <li class="nav-item">
+                    <a href="./Index.html">
+                        <span class="lni lni-lg lni-dashboard"></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</span>
+                    </a>
+                </li>
+                <!--USERS-->
+                <li class="nav-item nav-item-has-children active">
+                    <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_3" aria-controls="ddmenu_3" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="lni lni-users lni-lg"></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Users</span>
+                    </a>
+                    <ul id="ddmenu_3" class="collapse dropdown-nav">
+                        <li>
+                            <a href="./Admins.html"> Admin</a>
+                        </li>
+                        <li>
+                            <a href="./Students.html"> Student</a>
+                        </li>
+                        <li>
+                            <a href="./Employees.html"> Employees</a>
+                        </li>
+                    </ul>
+                </li>
+                <!--COURSES-->
+                <li class="nav-item">
+                    <a href="./Courses.html">
+                        <span class="lni lni-library lni-lg"></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Courses</span>
+                    </a>
+                </li>
+                <!--LECTURES-->
+                <li class="nav-item">
+                    <a href="./Lectures.html">
+                        <span class="lni lni-paperclip lni-lg"></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Lectures</span>
+                    </a>
+                </li>
+                <!--DIVIDER-->
+                <span class="divider">
+                        <hr>
+                    </span>
+                <!--POSTS-->
+                <li class="nav-item">
+                    <a href="./Posts.html">
+                        <span class="lni lni-postcard lni-lg"></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Posts</span>
+                    </a>
+                </li>
+                <!--PODCASTS-->
+                <li class="nav-item">
+                    <a href="./podcasts.html">
+                        <span class="lni lni-spotify-original lni-lg"></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Podcasts</span>
+                    </a>
+                </li>
+                <!--ANNOUNCMENTS-->
+                <li class="nav-item">
+                    <a href="./Announcments.html">
+                        <span class="lni lni-bullhorn lni-lg"></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Announcments</span>
+                    </a>
+                </li>
+                <!--DIVIDER-->
+                <span class="divider">
+                        <hr>
+                    </span>
+                <!--INFO_HUB-->
+                <li class="nav-item nav-item-has-children">
+                    <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_4" aria-controls="ddmenu_4" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="lni lni-information lni-lg"></span>
+                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;information Hub</span>
+                    </a>
+                    <ul id="ddmenu_4" class="collapse dropdown-nav">
+                        <li>
+                            <a href="./FAQ.html"> FAQ</a>
+                        </li>
+                        <li>
+                            <a href="./Inbox.html"> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="./Banners.html"> Banners</a>
+                        </li>
+                        <li>
+                            <a href="./Links.html"> Links</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <div class="overlay"></div>
+    <!-- ======== sidebar-nav end =========== -->
+    <!-- ======== main-wrapper start =========== -->
+    <main class="main-wrapper">
+        <!-- ========== header start ========== -->
+        <header class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-6">
+                        <div class="header-left d-flex align-items-center">
+                            <div class="menu-toggle-btn mr-15">
+                                <button id="menu-toggle" class="main-btn primary-btn btn-hover">
+                                        <i class="lni lni-chevron-left me-2"></i>
+                                        Menu
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-6">
+                        <div class="header-right">
+                            <!-- profile start -->
+                            <div class="profile-box ml-15">
+                                <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="profile-info">
+                                            <div class="info">
+                                                <div class="image">
+                                                    <img src="./public/images/profile.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <h6 class="fw-500">Marwan Tamer</h6>
+                                                    <p>Admin</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+                                    <li>
+                                        <div class="author-info flex items-center !p-1">
+                                            <div class="image">
+                                                <img src="./public/images/profile.png" alt="image">
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="text-sm">Marwan Tamer</h4>
+                                                <a class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white text-xs" href="#">Email@gmail.com</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#0">
+                                            <i class="lni lni-user"></i> View Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0">
+                                            <i class="lni lni-cog"></i> Settings
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#0">
+                                            <i class="lni lni-exit"></i> Sign Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- profile end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ========== header end ========== -->
+        <!-- ========== section start ========== -->
+        <section class="section">
+            <div class="container-fluid">
+                <!-- ========== title-wrapper start ========== -->
+                <div id="notifications" class="notfmodal"></div>
+                <div class="title-wrapper pt-30">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="title">
+                                <h2>Admins</h2>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        <div class="col-md-6">
+                            <div class="breadcrumb-wrapper">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a>Users</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            Admins
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- ========== title-wrapper end ========== -->
+                <div class="row">
+                    <div class=" col-lg-4 col-sm-6">
+                        <div class="icon-card mb-30">
+                            <div class="icon purple">
+                                <i class="lni lni-users"></i>
+                            </div>
+                            <div class="content">
+                                <h6 class="mb-10">Total Admins</h6>
+                                <h3 id="tac" class="text-bold mb-10">0</h3>
+                            </div>
+                        </div>
+                        <!-- End Icon Cart -->
+                    </div>
+                    <!-- End Col -->
+                    <div class=" col-lg-4 col-sm-6">
+                        <div class="icon-card mb-30">
+                            <div class="icon success">
+                                <i class="lni lni-user"></i>
+                            </div>
+                            <div class="content">
+                                <h6 class="mb-10">Active Admins</h6>
+                                <h3 id="aa" class="text-bold mb-10">0</h3>
+                            </div>
+                        </div>
+                        <!-- End Icon Cart -->
+                    </div>
+                    <!-- End Col -->
+                    <div class=" col-lg-4 col-sm-6">
+                        <div class="icon-card mb-30">
+                            <div class="icon orange">
+                                <i class="lni lni-ban"></i>
+                            </div>
+                            <div class="content">
+                                <h6 class="mb-10">Inactive Admins</h6>
+                                <h3 id="ia" class="text-bold mb-10">0</h3>
+                            </div>
+                        </div>
+                        <!-- End Icon Cart -->
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Row -->
+                <!-- End Col -->
+                <div class="col-lg-12">
+                    <div class="card-style mb-30">
+                        <div class="title d-flex flex-wrap align-items-center justify-content-between">
+                            <div class="left">
+                                <div class=" d-md-flex table-search">
+                                    <form action="#">
+                                        <input type="search" id="search" placeholder="Search...">
+                                        <button>
+                                                <i class="lni lni-search-alt"></i>
+                                            </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button class="main-btn dark-btn btn-hover" data-bs-toggle="dropdown">
+                                        <i class="lni lni-exit-up"></i>
+                                        Export
+                                    </button>
+                                <ul class="dropdown-menu text-center">
+                                    <li>
+                                        <a href="">
+                                            <i class="lni lni-printer"></i> Print
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="lni lni-remove-file"></i> PDF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="lni lni-printer"></i> Print
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button class="main-btn primary-btn btn-hover" onclick="openAddPopupForm()">
+                                        <i class="lni me-2 lni-plus"></i>
+                                        Add Admin
+                                    </button>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- End Title -->
+                        <div class="table-responsive">
+                            <table id="mytable" class="table top-selling-table"></table>
+                            <!-- End Table -->
+                            <br>
+                            <div class="title d-flex flex-wrap align-items-center justify-content-between">
+                                <div class="left" id="countdata"></div>
+                                <div class="right">
+                                    <!-- Pagination controls -->
+                                    <div class="pagination-container">
+                                        <ul class="pagination"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Col -->
+            </div>
+            <!-- End Row -->
+            </div>
+            <!-- end container -->
+        </section>
+        <!-- ========== section end ========== -->
+        <div id="addpopup">
+            <div class="popup-content wh-43">
+                <span id="add-admin-popup-close-x" class="popup-close">&times;</span>
+                <h2 class="popup-title">Add Admin</h2>
+                <form method="post" action="/admin/user/add-admin">
+                    <div class="popup-body">
+                        <div class="form-group input-style-1">
+                            <input type="text" placeholder="Full Name" name="fullName" required>
+                        </div>
+                        <div class="form-group input-style-1">
+                            <input type="email" placeholder="Email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="popup-actions">
+                        <button type="submit" class="main-btn primary-btn btn-hover">Add</button>
+                        <button id="add-admin-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="viewpopup">
+            <div class="popup-content wh-65">
+                <span id="view-admin-popup-close-x" class="popup-close">&times;</span>
+                <h2 class="popup-title">View Admin</h2>
+                <div class="popup-body">
+                    <div class="form-group input-style-1">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Full Name" name="fullName" disabled>
+                    </div>
+                    <div class="form-group input-style-1">
+                        <label>Email</label>
+                        <input type="email" placeholder="Email" name="email" disabled>
+                    </div>
+                    <div class="select-style-1">
+                        <label>Status</label>
+                        <div class="select-position">
+                            <select name="active" disabled>
+                                <option value="true">Active</option>
+                                <option value="false">Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-actions">
+                    <button id="view-admin-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
+                </div>
+            </div>
+        </div>
+        <div id="editpopup">
+            <div class="popup-content wh-65">
+                <span id="edit-admin-popup-close-x" class="popup-close">&times;</span>
+                <h2 class="popup-title">Edit Admin</h2>
+                <form method="post" action="/admin/user/edit-admin">
+                    <div class="popup-body">
+                        <div class="form-group input-style-1">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Full Name" name="fullName">
+                        </div>
+                        <div class="form-group input-style-1">
+                            <label>Email</label>
+                            <input type="email" placeholder="Email" name="email" disabled>
+                        </div>
+                        <div class="select-style-1">
+                            <label>Status</label>
+                            <div class="select-position">
+                                <select name="active">
+                                    <option value="true">Active</option>
+                                    <option value="false">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="_id">
+                    <div class="popup-actions">
+                        <button type="submit" class="main-btn primary-btn btn-hover">Edit</button>
+                        <button id="edit-admin-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- ========== footer start =========== -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 order-last order-md-first">
+                        <div class="copyright text-center text-md-start">
+                            <p class="text-sm">
+                                Developed by
+                                <a href="" target="_blank">
+                                    ICPC GU TEAM
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- end col-->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </footer>
+        <!-- ========== footer end =========== -->
+    </main>
+    <!-- ======== main-wrapper end =========== -->
+    <!-- ========= All Javascript files linkup ======== -->
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/Chart.min.js"></script>
+    <script src="./public/js/dynamic-pie-chart.js"></script>
+    <script src="./public/js/moment.min.js"></script>
+    <script src="./public/js/fullcalendar.js"></script>
+    <script src="./public/js/jvectormap.min.js"></script>
+    <script src="./public/js/world-merc.js"></script>
+    <script src="./public/js/polyfill.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script src="./public/js/popup/admin.js"></script>
+    <script>
+        let array = [];
+        let tarraycount = array.length;
+        const pageSize = 7;
+        let currentPage = 1;
+
+        function showtable(curarray, currentPage, pageSize) {
+            let table = document.getElementById("mytable");
+            let arraycount = curarray.length;
+
+            let startIndex = (currentPage - 1) * pageSize;
+            let endIndex = Math.min(startIndex + pageSize, arraycount);
+
+            let tableHTML = `
+            <thead class="table-bordered">
+              <tr>
+                <th>
+                  <h6 class="text-sm text-medium">Name</h6>
+                </th>
+                <th class="min-width">
+                  <h6 class="text-sm text-medium">Mail</h6>
+                </th>
+                <th class="min-width">
+                  <h6 class="text-sm text-medium">Status</h6>
+                </th>
+                <th>
+                  <h6 class="text-sm text-medium text-end">Actions</h6>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+          `;
+
+            if (curarray.length === 0) {
+                tableHTML += `<tr><td colspan="4"><span>Not Found!</span></td></tr>`;
+            } else {
+                for (let i = startIndex; i < endIndex; i++) {
+                    var active = curarray[i].active ? `<span class="status-btn success-btn-light">Active</span>` : `<span class="status-btn close-btn">Inactive</span>`;
+
+                    tableHTML += `
+                <tr>
+                  <td>
+                    <div class="product">
+                      <p class="text-sm">${curarray[i].fullName}</p>
+                    </div>
+                  </td>
+                  <td>
+                    <p class="text-sm">${curarray[i].email}</p>
+                  </td>
+                  <td>
+                    ${active}
+                  </td>
+                  <td>
+                    <div class="action justify-content-end">
+                      <input type="hidden" name="id" value="${curarray[i]._id}">
+                      <input type="hidden" name="fullName" value="${curarray[i].fullName}">
+                      <input type="hidden" name="email" value="${curarray[i].email}">
+                      <input type="hidden" name="active" value="${curarray[i].active}">
+                      <button class="edit" onclick="openEditPopupForm()">
+                        <i class="lni lni-pencil"></i>
+                      </button>
+                      <button class="edit" onclick="openViewPopupForm()">
+                        <i class="lni lni-eye"></i>
+                      </button>
+                      <button class="more-btn ml-10 dropdown-toggle" id="moreAction1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="lni lni-more-alt"></i>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
+                        <li class="dropdown-item">
+                          <form method="post" action="/admin/user/delete-admin">
+                            <input type="hidden" name="_id" value="${curarray[i]._id}">
+                            <button type="submit"><a class="text-gray">Remove</a></button>
+                          </form>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              `;
+                }
+            }
+
+            tableHTML += `</tbody>`;
+            table.innerHTML = tableHTML;
+            document.getElementById("countdata").innerHTML = `<p>Showing ${endIndex - startIndex} of ${tarraycount} entries</p>`;
+        }
+
+        var newarray = array;
+        document.getElementById("search").addEventListener("keyup", function() {
+            var search = this.value;
+            newarray = array.filter(function(val) {
+                if (val.fullName.includes(search) || val.email.includes(search)) {
+                    var newobj = {
+                        _id: val._id,
+                        fullName: val.fullName,
+                        email: val.email,
+                        active: val.active
+                    }
+                    return newobj;
+                }
+            });
+            currentPage = 1;
+            let tPages = Math.ceil(newarray.length / pageSize);
+            showtable(newarray, currentPage, pageSize);
+            setupPagination(tPages, newarray);
+        });
+
+        function setupPagination(totalPages, curPage) {
+            const maxPagesToShow = 5; // Adjust this value as needed
+            const paginationContainer = document.querySelector(".pagination-container");
+
+            let startPage = Math.max(1, curPage - Math.floor(maxPagesToShow / 2));
+            let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+
+            if (endPage - startPage + 1 < maxPagesToShow) {
+                startPage = Math.max(1, endPage - maxPagesToShow + 1);
+            }
+
+            let paginationHTML = '<ul class="pagination">';
+
+            // "Previous" button
+            paginationHTML += `
+            <li>
+              <a class="light-btn btn-hover ${curPage === 1 ? 'disabled' : ''}" onclick="changePage('prev')">
+                Previous
+              </a>
+            </li>
+          `;
+
+            // Page numbers with ellipsis
+            for (let i = startPage; i <= endPage; i++) {
+                paginationHTML += `
+              <li>
+                <a class="btn-hover ${curPage === i ? 'primary-btn' : 'light-btn'}" onclick="changePage(${i})">${i}</a>
+              </li>
+            `;
+            }
+
+            if (endPage < totalPages) {
+                paginationHTML += '<li><span>...</span></li>';
+                paginationHTML += `
+              <li>
+                <a class="btn-hover ${curPage === totalPages ? 'primary-btn' : 'light-btn'}" onclick="changePage(${totalPages})">${totalPages}</a>
+              </li>
+            `;
+            }
+
+            // "Next" button
+            paginationHTML += `
+            <li>
+              <a class="light-btn btn-hover ${curPage === totalPages ? 'disabled' : ''}" onclick="changePage('next')">
+                Next
+              </a>
+            </li>
+          `;
+
+            paginationHTML += '</ul>';
+
+            paginationContainer.innerHTML = paginationHTML;
+        }
+
+        function changePage(page) {
+            if (page === 'prev' && currentPage > 1) {
+                currentPage--;
+            } else if (page === 'next' && currentPage < totalPages) {
+                currentPage++;
+            } else if (typeof page === 'number' && page >= 1 && page <= totalPages) {
+                currentPage = page;
+            }
+
+            showtable(newarray, currentPage, pageSize);
+            setupPagination(Math.ceil(newarray.length / pageSize), currentPage);
+        }
+
+        function updateAdminCounts() {
+            const totalAdmins = array.length;
+            const activeAdmins = array.filter(admin => admin.active).length;
+            const inactiveAdmins = totalAdmins - activeAdmins;
+
+            document.getElementById('tac').textContent = totalAdmins;
+            document.getElementById('aa').textContent = activeAdmins;
+            document.getElementById('ia').textContent = inactiveAdmins;
+        }
+
+        updateAdminCounts();
+        let totalPages = Math.ceil(array.length / pageSize);
+        showtable(array, currentPage, pageSize);
+        setupPagination(totalPages, currentPage);
+    </script>
+</body>
+
+</html>

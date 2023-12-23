@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #12284c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .title {
+        color: white;
+        font-size: 24px;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        padding: 15px 25px;
+        background-color: #31b44b;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-size: 18px;
+        width: 100%;
+      }
+      .btn i {
+        margin-right: 10px;
+      }
+      .btn:hover {
+        background-color: #28a043;
+      }
+      @media (max-width: 480px) {
+        .logo {
+          width: 100px;
+          height: 100px;
+        }
+        .title {
+          font-size: 20px;
+        }
+        .btn {
+          font-size: 16px;
+          padding: 12px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="./public/images/links logo.png"
+        alt="Logo"
+        class="logo"
+        data-aos="fade-down"
+      />
+      <h1 class="title" data-aos="zoom-in">@ICPC GU Community</h1>
+      <a href="./index.html" class="btn" data-aos="fade-up" target="_blank"
+        ><i class="fab"></i> Website
+      </a>
+      <a
+        href="https://chat.whatsapp.com/J0SWJaCPwUw2CRSwX4lSvF"
+        target="_blank"
+        class="btn"
+        data-aos="fade-up"
+        ><i class="fab fa-whatsapp"></i> WhatsApp Group</a
+      >
+      <a
+        href="https://www.instagram.com/gu.icpc"
+        target="_blank"
+        class="btn"
+        data-aos="fade-up"
+        ><i class="fab fa-instagram"></i> Instagram</a
+      >
+      <a
+        href="https://www.facebook.com/profile.php?id=61550299378856"
+        target="_blank"
+        class="btn"
+        data-aos="fade-up"
+        ><i class="fab fa-facebook-f"></i> Facebook</a
+      >
+      <a
+        href="https://www.youtube.com/channel/UCu4NYwYioxI7_yTaZz8hXfA"
+        target="_blank"
+        class="btn"
+        data-aos="fade-up"
+        ><i class="fab fa-youtube"></i> YouTube</a
+      >
+    </div>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      document.addEventListener("scroll", function () {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        let moveAmount = scrollTop * 0.25;
+        document.body.style.setProperty("--moveBackground", moveAmount + "px");
+      });
+    </script>
+  </body>
+</html>
