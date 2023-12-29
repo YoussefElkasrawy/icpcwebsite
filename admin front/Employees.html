@@ -402,7 +402,7 @@
                 <div class="popup-body row">
                     <div class="col">
                         <div class="form-group input-style-1">
-                            <img src="<%= url %>/uploads/employees/" alt="empimg">
+                            <img src="./uploads/employees/" alt="empimg">
                         </div>
                         <div class="select-style-1">
                             <label>Role</label>
@@ -446,7 +446,18 @@
                     <div class="popup-body row">
                         <div class="col">
                             <div class="form-group input-style-1">
-                                <input type="file" name="image" draggable="true">
+                                <div class="client-profile-photo">
+                                    <div class="image">
+                                        <img src="./uploads/employees/emp-def8b17e-7546-4b28-b6c1-698e07fa1c6d-1703190177474.jpeg" alt="profile">
+                                    </div>
+                                    <div class="update-image">
+                                        <input type="file" name="image">
+                                        <label for="">
+                                            <i class="lni lni-camera"></i>
+                                            Edit Photo
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group input-style-1">
                                 <input type="text" placeholder="Name" name="name" required>
@@ -522,7 +533,16 @@
     <script src="./public/js/main.js"></script>
     <script src="./public/js/popup/employee.js"></script>
     <script>
-        let array = [];
+        let array = [{
+            _id: "dkefnaenqfnenefoniefw",
+            image: "emp-def8b17e-7546-4b28-b6c1-698e07fa1c6d-1703190177474.jpeg",
+            name: "youssef",
+            jobTitle: "test",
+            role: "trainer",
+            linkedin: "/",
+            instgram: "/",
+            facebook: "/"
+        }];
         let tarraycount = array.length;
         const pageSize = 7;
         let currentPage = 1;
@@ -571,7 +591,7 @@
                   <td>
                     <div class="product">
                       <div class="image">
-                        <img src="<%= url %>/uploads/employees/${curarray[i].image}" alt="img">
+                        <img src="./uploads/employees/${curarray[i].image}" alt="img">
                       </div>
                       <p class="text-sm">${curarray[i].name}</p>
                     </div>
