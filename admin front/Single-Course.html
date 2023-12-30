@@ -260,7 +260,7 @@
                                     ></iframe>
                                 </div>
                                 <hr>
-                                <form action="#">
+                                <form method="post" action="/edit">
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="input-style-1">
@@ -288,22 +288,9 @@
                                             </div>
                                         </div>
                                         <!-- end col -->
-                                        <div class="col-12">
-                                            <div class="mb-30">
-                                                <div class="form-check form-switch toggle-switch mb-30">
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="checkbox"
-                                                        id="toggleSwitch1"
-                                                        name="hidden"
-                                                    >
-                                                    <label class="form-check-label" for="toggleSwitch1">Hidden</label>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <br>
                                         <!-- end col -->
-                                        <div class="col-12">
+                                        <div class="col">
                                             <div class="button-group d-flex justify-content-center flex-wrap">
                                                 <button class="main-btn primary-btn btn-hover w-100 text-center" type="submit">
                                                     Update
@@ -312,6 +299,14 @@
                                         </div>
                                     </div>
                                     <!-- end row -->
+                                </form>
+                                <br>
+                                <form method="post" action="/de">
+                                    <div class="button-group d-flex justify-content-center flex-wrap col">
+                                        <button class="main-btn danger-btn btn-hover w-100 text-center">
+                                            Delete
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -366,37 +361,16 @@
                                             <form action="#">
                                                 <input type="search" id="search" placeholder="Search...">
                                                 <button>
-                                                        <i class="lni lni-search-alt"></i>
-                                                    </button>
+                                                    <i class="lni lni-search-alt"></i>
+                                                </button>
                                             </form>
                                         </div>
                                     </div>
                                     <div class="right">
-                                        <button class="main-btn dark-btn btn-hover" data-bs-toggle="dropdown">
-                                                <i class="lni lni-exit-up"></i>
-                                                Export
-                                            </button>
-                                        <ul class="dropdown-menu text-center">
-                                            <li>
-                                                <a href="">
-                                                    <i class="lni lni-printer"></i> Print
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="">
-                                                    <i class="lni lni-remove-file"></i> PDF
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="">
-                                                    <i class="lni lni-printer"></i> Print
-                                                </a>
-                                            </li>
-                                        </ul>
                                         <button class="main-btn primary-btn btn-hover" onclick="openAddPopupForm()">
-                                                <i class="lni me-2 lni-plus"></i>
-                                                Add Lecture
-                                            </button>
+                                            <i class="lni me-2 lni-plus"></i>
+                                            Add Lecture
+                                        </button>
                                     </div>
                                 </div>
                                 <br>
@@ -422,106 +396,127 @@
                 </section>
                 <!-- ========== section end ========== -->
                 <div id="addpopup">
-                    <div class="popup-content wh-43">
-                        <span id="add-admin-popup-close-x" class="popup-close">&times;</span>
-                        <h2 class="popup-title">Add Admin</h2>
-                        <form method="post" action="/admin/user/add-admin">
+                    <div class="popup-content wh-765">
+                        <span id="add-lec-popup-close-x" class="popup-close">&times;</span>
+                        <h2 class="popup-title">Add Lecture</h2>
+                        <form method="post" action="/admin/user/add-lecture">
                             <div class="popup-body">
                                 <div class="form-group input-style-1">
+                                    <label>Title</label>
                                     <input
                                         type="text"
-                                        placeholder="Full Name"
-                                        name="fullName"
+                                        placeholder="Title"
+                                        name="title"
                                         required
                                     >
                                 </div>
                                 <div class="form-group input-style-1">
+                                    <label>Description</label>
+                                    <textarea placeholder="Descriptiont" name="description" required></textarea>
+                                </div>
+                                <div class="form-group input-style-1">
+                                    <label>yt Video Code</label>
                                     <input
-                                        type="email"
-                                        placeholder="Email"
-                                        name="email"
+                                        type="text"
+                                        placeholder="wjdvwd7#@jbdcs"
+                                        name="ytVideoCode"
                                         required
                                     >
+                                </div>
+                                <div class="form-group input-style-1">
+                                    <label>Index</label>
+                                    <input type="number" name="index" required>
                                 </div>
                             </div>
                             <div class="popup-actions">
                                 <button type="submit" class="main-btn primary-btn btn-hover">Add</button>
-                                <button id="add-admin-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
+                                <button id="add-lec-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div id="viewpopup">
-                    <div class="popup-content wh-65">
-                        <span id="view-admin-popup-close-x" class="popup-close">&times;</span>
-                        <h2 class="popup-title">View Admin</h2>
+                    <div class="popup-content wh-87">
+                        <span id="view-lec-popup-close-x" class="popup-close">&times;</span>
+                        <h2 class="popup-title">View Lecture</h2>
                         <div class="popup-body">
-                            <div class="form-group input-style-1">
-                                <label>Full Name</label>
-                                <input
-                                    type="text"
-                                    placeholder="Full Name"
-                                    name="fullName"
-                                    disabled
-                                >
+                            <div class="row align-content-center">
+                                <iframe
+                                    height="200"
+                                    class="ytview"
+                                    src=""
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen="false"
+                                ></iframe>
                             </div>
                             <div class="form-group input-style-1">
-                                <label>Email</label>
-                                <input
-                                    type="email"
-                                    placeholder="Email"
-                                    name="email"
-                                    disabled
-                                >
+                                <label>Title</label>
+                                <input type="text" name="title" disabled>
                             </div>
-                            <div class="select-style-1">
-                                <label>Status</label>
-                                <div class="select-position">
-                                    <select name="active" disabled>
-                                        <option value="true">Active</option>
-                                        <option value="false">Inactive</option>
-                                    </select>
-                                </div>
+                            <div class="form-group input-style-1">
+                                <label>Description</label>
+                                <textarea
+                                    placeholder="Description"
+                                    class="description"
+                                    name="description"
+                                    disabled
+                                ></textarea>
+                            </div>
+                            <div class="form-group input-style-1">
+                                <label>Index</label>
+                                <input type="number" name="index" disabled>
                             </div>
                         </div>
                         <div class="popup-actions">
-                            <button id="view-admin-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
+                            <button id="view-lec-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
                         </div>
                     </div>
                 </div>
                 <div id="editpopup">
-                    <div class="popup-content wh-65">
-                        <span id="edit-admin-popup-close-x" class="popup-close">&times;</span>
-                        <h2 class="popup-title">Edit Admin</h2>
-                        <form method="post" action="/admin/user/edit-admin">
+                    <div class="popup-content wh-765">
+                        <span id="edit-lec-popup-close-x" class="popup-close">&times;</span>
+                        <h2 class="popup-title">Edit Lecture</h2>
+                        <form method="post" action="/admin/user/edit-lecture">
                             <div class="popup-body">
                                 <div class="form-group input-style-1">
-                                    <label>Full Name</label>
-                                    <input type="text" placeholder="Full Name" name="fullName">
-                                </div>
-                                <div class="form-group input-style-1">
-                                    <label>Email</label>
+                                    <label>Title</label>
                                     <input
-                                        type="email"
-                                        placeholder="Email"
-                                        name="email"
-                                        disabled
+                                        type="text"
+                                        placeholder="Title"
+                                        name="title"
+                                        required
                                     >
                                 </div>
-                                <div class="select-style-1">
-                                    <label>Status</label>
-                                    <div class="select-position">
-                                        <select name="active">
-                                            <option value="true">Active</option>
-                                            <option value="false">Inactive</option>
-                                        </select>
-                                    </div>
+                                <div class="form-group input-style-1">
+                                    <label>Description</label>
+                                    <textarea
+                                        placeholder="Descriptiont"
+                                        class="description"
+                                        name="description"
+                                        required
+                                    ></textarea>
+                                </div>
+                                <div class="form-group input-style-1">
+                                    <label>yt Video Code</label>
+                                    <input
+                                        type="text"
+                                        placeholder="wjdvwd7#@jbdcs"
+                                        name="ytVideoCode"
+                                        required
+                                    >
+                                </div>
+                                <div class="form-group input-style-1">
+                                    <label>Index</label>
+                                    <input type="number" name="index" required>
                                 </div>
                             </div>
                             <input type="hidden" name="_id">
+                            <input type="hidden" name="courseId">
                             <div class="popup-actions">
                                 <button type="submit" class="main-btn primary-btn btn-hover">Edit</button>
-                                <button id="edit-admin-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
+                                <button id="edit-lec-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
                             </div>
                         </form>
                     </div>
@@ -559,9 +554,18 @@
             <script src="./public/js/world-merc.js"></script>
             <script src="./public/js/polyfill.js"></script>
             <script src="./public/js/main.js"></script>
-            <script src="./public/js/popup/course.js"></script>
+            <script src="./public/js/popup/lecture.js"></script>
             <script>
-                let array = [];
+                let array = [
+                {
+                    "courseId": "fegioefgioefi",
+                    "title": "test",
+                    "description": "test description",
+                    "ytVideoCode": "cCTh9MuZ5lw?si=ft9-Zd7jy6LCIZi5",
+                    "index": 1,
+                    "viewsCount":84
+                  }
+                  ];
                 let tarraycount = array.length;
                 const pageSize = 7;
                 let currentPage = 1;
@@ -587,7 +591,7 @@
                         </th>
                         <th>
                             <h6 class="text-sm text-medium text-end">Actions</h6>
-                          </th>
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -601,29 +605,34 @@
                         <tr>
                           <td>
                             <div class="product">
-                              <div class="image">
                                 <iframe
-                                                            class="card-img"
-                                                            width="220"
-                                                            height="140"
-                                                            src="https://www.youtube.com/embed/cCTh9MuZ5lw?si=ft9-Zd7jy6LCIZi5"
-                                                            title="YouTube video player"
-                                                            frameborder="0"
-                                                            allow="accelerometer; gyroscope; picture-in-picture; web-share"
-                                                            allowfullscreen="false"
-                                                        ></iframe>
+                                width="150"
+                                height="150"
+                                src="https://www.youtube.com/embed/${curarray[i].ytVideoCode}"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen="false"
+                                ></iframe>
                               </div>
                             </div>
                           </td>
                           <td>
-                            <p class="text-sm">${curarray[i].name}</p>
+                            <h5>${curarray[i].title}</h5>
                           </td>
                           <td>
-                            <span class="status-btn success-btn-light">1000</span>
+                            <span class="status-btn success-btn-light">${curarray[i].viewsCount}</span>
                           </td>
                           <td>
                             <div class="action justify-content-end">
-                              <button class="edit" onclick="openEditPopupForm()">
+                                <input type="hidden" name="id" value="${curarray[i]._id}">
+                                <input type="hidden" name="courseId" value="${curarray[i].courseId}">
+                                <input type="hidden" name="title" value="${curarray[i].title}">
+                                <textarea class="description" name="description" hidden>${curarray[i].description}</textarea>
+                                <input type="hidden" name="ytVideoCode" value="${curarray[i].ytVideoCode}">
+                                <input type="hidden" name="index" value="${curarray[i].index}">
+                                <input type="hidden" name="viewsCount" value="${curarray[i].viewsCount}">
+                            <button class="edit" onclick="openEditPopupForm()">
                                 <i class="lni lni-pencil"></i>
                               </button>
                               <button class="edit" onclick="openViewPopupForm()">
@@ -634,7 +643,7 @@
                               </button>
                               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction1">
                                 <li class="dropdown-item">
-                                  <form method="post" action="/admin/user/delete-employee">
+                                  <form method="post" action="/admin/user/delete-lecture">
                                     <input type="hidden" name="_id" value="${curarray[i]._id}">
                                     <button type="submit"><a class="text-gray">Remove</a></button>
                                   </form>
@@ -656,16 +665,15 @@
                 document.getElementById("search").addEventListener("keyup", function() {
                     var search = this.value;
                     newarray = array.filter(function(val) {
-                        if (val.name.includes(search) || val.jobTitle.includes(search) || val.role.includes(search)) {
+                        if (val.title.includes(search) || val.index.includes(search)) {
                             var newobj = {
                                 _id: val._id,
-                                image: val.image,
-                                name: val.name,
-                                jobTitle: val.jobTitle,
-                                role: val.role,
-                                linkedin: val.linkedin,
-                                instgram: val.instgram,
-                                facebook: val.facebook
+                                courseId: val.courseId,
+                                title: val.title,
+                                description: val.description,
+                                ytVideoCode: val.ytVideoCode,
+                                index: val.index,
+                                viewsCount: val.viewsCount
                             }
                             return newobj;
                         }
