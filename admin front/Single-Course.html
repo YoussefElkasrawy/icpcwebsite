@@ -596,7 +596,6 @@
                     </thead>
                     <tbody>
                   `;
-        
                     if (curarray.length === 0) {
                         tableHTML += `<tr><td colspan="4"><span>Not Found!</span></td></tr>`;
                     } else {
@@ -621,7 +620,9 @@
                             <h5>${curarray[i].title}</h5>
                           </td>
                           <td>
+                            <div class="action justify-content-end">
                             <span class="status-btn success-btn-light">${curarray[i].viewsCount}</span>
+                            </div>
                           </td>
                           <td>
                             <div class="action justify-content-end">
