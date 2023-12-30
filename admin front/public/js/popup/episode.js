@@ -17,20 +17,22 @@ function openAddPopupForm () {
     const tableRow = event.target.parentNode.parentNode.parentNode
   
     const id = tableRow.querySelector('input[name="id"]').value
-    const courseId = tableRow.querySelector('input[name="courseId"]').value
+    const podcastId = tableRow.querySelector('input[name="podcastId"]').value
     const title = tableRow.querySelector('input[name="title"]').value
-    const description = tableRow.querySelector('.description').value
-    const ytVideoCode = tableRow.querySelector('input[name="ytVideoCode"]').value
-    const index = tableRow.querySelector('input[name="index"]').value
+    const by = tableRow.querySelector('input[name="by"]').value
+    const googlelink = tableRow.querySelector('input[name="googlelink"]').value
+    const spotifylink = tableRow.querySelector('input[name="spotifylink"]').value
+    const ytlink = tableRow.querySelector('input[name="ytlink"]').value
   
     const popupForm = document.getElementById('editpopup')
   
     popupForm.querySelector('input[name="_id"]').value = id
-    popupForm.querySelector('input[name="courseId"]').value = courseId
+    popupForm.querySelector('input[name="podcastId"]').value = podcastId
     popupForm.querySelector('input[name="title"]').value = title
-    popupForm.querySelector('.description').value = description
-    popupForm.querySelector('input[name="ytVideoCode"]').value = ytVideoCode
-    popupForm.querySelector('input[name="index"]').value = index
+    popupForm.querySelector('input[name="by"]').value = by
+    popupForm.querySelector('input[name="googlelink"]').value = googlelink
+    popupForm.querySelector('input[name="spotifylink"]').value = spotifylink
+    popupForm.querySelector('input[name="ytlink"]').value = ytlink
   
     popupForm.style.display = 'block'
   }

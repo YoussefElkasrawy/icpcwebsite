@@ -66,7 +66,7 @@
                         </ul>
                     </li>
                     <!--COURSES-->
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a href="./Courses.html">
                             <span class="lni lni-library lni-lg"></span>
                             <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Courses</span>
@@ -84,7 +84,7 @@
                         </a>
                     </li>
                     <!--PODCASTS-->
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a href="./podcasts.html">
                             <span class="lni lni-spotify-original lni-lg"></span>
                             <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Podcasts</span>
@@ -348,10 +348,10 @@
                 </section>
                 <!-- ========== section end ========== -->
                 <div id="addpopup">
-                    <div class="popup-content wh-765">
+                    <div class="popup-content wh-875">
                         <span id="add-episode-popup-close-x" class="popup-close">&times;</span>
                         <h2 class="popup-title">Add Episode</h2>
-                        <form method="post" action="/admin/user/add-lecture">
+                        <form method="post" action="/admin/user/add-epi">
                             <div class="popup-body">
                                 <div class="form-group input-style-1">
                                     <label>Title</label>
@@ -363,21 +363,40 @@
                                     >
                                 </div>
                                 <div class="form-group input-style-1">
-                                    <label>Description</label>
-                                    <textarea placeholder="Descriptiont" name="description" required></textarea>
-                                </div>
-                                <div class="form-group input-style-1">
-                                    <label>yt Video Code</label>
+                                    <label>by</label>
                                     <input
                                         type="text"
-                                        placeholder="wjdvwd7#@jbdcs"
-                                        name="ytVideoCode"
+                                        placeholder="by"
+                                        name="by"
                                         required
                                     >
                                 </div>
                                 <div class="form-group input-style-1">
-                                    <label>Index</label>
-                                    <input type="number" name="index" required>
+                                    <label>Google link</label>
+                                    <input
+                                        type="text"
+                                        placeholder="/"
+                                        name="googlelink"
+                                        required
+                                    >
+                                </div>
+                                <div class="form-group input-style-1">
+                                    <label>Spotify link</label>
+                                    <input
+                                        type="text"
+                                        placeholder="spotify link"
+                                        name="spotifylink"
+                                        required
+                                    >
+                                </div>
+                                <div class="form-group input-style-1">
+                                    <label>YouTube link</label>
+                                    <input
+                                        type="text"
+                                        placeholder="youtube link"
+                                        name="ytlink"
+                                        required
+                                    >
                                 </div>
                             </div>
                             <div class="popup-actions">
@@ -388,10 +407,10 @@
                     </div>
                 </div>
                 <div id="editpopup">
-                    <div class="popup-content wh-765">
+                    <div class="popup-content wh-875">
                         <span id="edit-epi-popup-close-x" class="popup-close">&times;</span>
                         <h2 class="popup-title">Edit Episode</h2>
-                        <form method="post" action="/admin/user/edit-lecture">
+                        <form method="post" action="/admin/user/edit-epi">
                             <div class="popup-body">
                                 <div class="form-group input-style-1">
                                     <label>Title</label>
@@ -403,30 +422,44 @@
                                     >
                                 </div>
                                 <div class="form-group input-style-1">
-                                    <label>Description</label>
-                                    <textarea
-                                        placeholder="Descriptiont"
-                                        class="description"
-                                        name="description"
-                                        required
-                                    ></textarea>
-                                </div>
-                                <div class="form-group input-style-1">
-                                    <label>yt Video Code</label>
+                                    <label>by</label>
                                     <input
                                         type="text"
-                                        placeholder="wjdvwd7#@jbdcs"
-                                        name="ytVideoCode"
+                                        placeholder="by"
+                                        name="by"
                                         required
                                     >
                                 </div>
                                 <div class="form-group input-style-1">
-                                    <label>Index</label>
-                                    <input type="number" name="index" required>
+                                    <label>Google link</label>
+                                    <input
+                                        type="text"
+                                        placeholder="/"
+                                        name="googlelink"
+                                        required
+                                    >
+                                </div>
+                                <div class="form-group input-style-1">
+                                    <label>Spotify link</label>
+                                    <input
+                                        type="text"
+                                        placeholder="spotify link"
+                                        name="spotifylink"
+                                        required
+                                    >
+                                </div>
+                                <div class="form-group input-style-1">
+                                    <label>YouTube link</label>
+                                    <input
+                                        type="text"
+                                        placeholder="youtube link"
+                                        name="ytlink"
+                                        required
+                                    >
                                 </div>
                             </div>
                             <input type="hidden" name="_id">
-                            <input type="hidden" name="courseId">
+                            <input type="hidden" name="podcastId">
                             <div class="popup-actions">
                                 <button type="submit" class="main-btn primary-btn btn-hover">Edit</button>
                                 <button id="edit-epi-closebtn" type="button" class="main-btn primary-btn btn-hover">Close</button>
