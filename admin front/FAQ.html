@@ -191,13 +191,15 @@
                                         </li>
                                         <li>
                                             <a href="#0">
-                                                <i class="lni lni-cog"></i> Settings
+                                                <i class="lni lni-cog"></i>
+                                                Settings
                                             </a>
                                         </li>
                                         <li class="divider"></li>
                                         <li>
                                             <a href="#0">
-                                                <i class="lni lni-exit"></i> Sign Out
+                                                <i class="lni lni-exit"></i>
+                                                Sign Out
                                             </a>
                                         </li>
                                     </ul>
@@ -223,16 +225,15 @@
                             <!-- end col -->
                             <div class="col-md-6">
                                 <div class="breadcrumb-wrapper">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item">
-                                                <a href="#0">Information Hub</a>
-                                            </li>
-                                            <li class="breadcrumb-item active" aria-current="page">
-                                                FAQ
-                                            </li>
-                                        </ol>
-                                    </nav>
+                                    <a
+                                        href=""
+                                        class="main-btn primary-btn btn-hover btn-sm"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#addCourseModal"
+                                    >
+                                        <i class="lni lni-plus mr-5"></i>
+                                        New Q&A
+                                    </a>
                                 </div>
                             </div>
                             <!-- end col -->
@@ -240,20 +241,73 @@
                         <!-- end row -->
                     </div>
                     <!-- ========== title-wrapper end ========== -->
+                    <!-- ======== add task modal start =========== -->
+                    <div class="add-task-modal">
+                        <div
+                            class="modal fade"
+                            id="addCourseModal"
+                            tabindex="-1"
+                            aria-hidden="false"
+                        >
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <form>
+                                        <div class="row gx-0">
+                                            <div class="col">
+                                                <div class="task-modal-left">
+                                                    <h5 class="modal-title">Create New Q&A</h5>
+                                                    <div class="input-style-1">
+                                                        <label>Questions</label>
+                                                        <input type="text" placeholder="Questions" required>
+                                                    </div>
+                                                    <div class="input-style-1">
+                                                        <label>Answer</label>
+                                                        <input type="text" placeholder="Answer" required>
+                                                    </div>
+                                                    <button type="button" class="border-0 bg-transparent ms-auto close-button" data-bs-dismiss="modal">
+                                                        <svg
+                                                            width="26"
+                                                            height="26"
+                                                            viewBox="0 0 30 30"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path d="M14.9999 13.2324L21.1874 7.04492L22.9549 8.81242L16.7674 14.9999L22.9549 21.1874L21.1874 22.9549L14.9999 16.7674L8.81242 22.9549L7.04492 21.1874L13.2324 14.9999L7.04492 8.81242L8.81242 7.04492L14.9999 13.2324Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </button>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <button type="button" data-bs-dismiss="modal" class="btn btn-danger w-100">
+                                                                Cancel
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <button type="button" data-bs-dismiss="modal" class="btn btn-primary w-100">
+                                                                <i class="lni lni-plus me-1 text-sm text-bold"></i>
+                                                                Create
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ======== add task modal end =========== -->
                     <div class="card-style">
                         <div class="single-notification">
                             <div class="notification">
-                                <a href="#0" class="content">
-                                    <h6>Who is Youssef Gamal ?</h6>
+                                <a href="" class="content">
+                                    <h6>How to join ICPC club ?</h6>
                                     <p class="text-sm text-gray">
-                                        Ragel mohtram w top el top w 3amli like 3la a5er post
+                                        answer
                                     </p>
                                 </a>
                             </div>
                             <div class="action">
-                                <button class="more-btn">
-                                    <i class="lni lni-eye"></i>
-                                </button>
                                 <button class="edit-btn">
                                     <i class="lni lni-pencil"></i>
                                 </button>
@@ -269,14 +323,11 @@
                                 <a href="#0" class="content">
                                     <h6>How to join ICPC club ?</h6>
                                     <p class="text-sm text-gray">
-                                        Kalem ahmed osama w rakmo aho 0123456789
+                                        answer
                                     </p>
                                 </a>
                             </div>
                             <div class="action">
-                                <button class="more-btn">
-                                    <i class="lni lni-eye"></i>
-                                </button>
                                 <button class="edit-btn">
                                     <i class="lni lni-pencil"></i>
                                 </button>
@@ -292,14 +343,11 @@
                                 <a href="#0" class="content">
                                     <h6>How to join ICPC club ?</h6>
                                     <p class="text-sm text-gray">
-                                        Kalem ahmed osama w rakmo aho 0123456789
+                                        answer
                                     </p>
                                 </a>
                             </div>
                             <div class="action">
-                                <button class="more-btn">
-                                    <i class="lni lni-eye"></i>
-                                </button>
                                 <button class="edit-btn">
                                     <i class="lni lni-pencil"></i>
                                 </button>
@@ -315,37 +363,11 @@
                                 <a href="#0" class="content">
                                     <h6>How to join ICPC club ?</h6>
                                     <p class="text-sm text-gray">
-                                        Kalem ahmed osama w rakmo aho 0123456789
+                                        answer
                                     </p>
                                 </a>
                             </div>
                             <div class="action">
-                                <button class="more-btn">
-                                    <i class="lni lni-eye"></i>
-                                </button>
-                                <button class="edit-btn">
-                                    <i class="lni lni-pencil"></i>
-                                </button>
-                                <button class="delete-btn">
-                                    <i class="lni lni-trash-can"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <!-- end single notification -->
-                        <!-- end single notification -->
-                        <div class="single-notification">
-                            <div class="notification">
-                                <a href="#0" class="content">
-                                    <h6>How to join ICPC club ?</h6>
-                                    <p class="text-sm text-gray">
-                                        Kalem ahmed osama w rakmo aho 0123456789
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="action">
-                                <button class="more-btn">
-                                    <i class="lni lni-eye"></i>
-                                </button>
                                 <button class="edit-btn">
                                     <i class="lni lni-pencil"></i>
                                 </button>

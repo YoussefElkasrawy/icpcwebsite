@@ -1,148 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- ======== Head start =========== -->
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./public/images/logo.png" type="image/x-icon">
-    <title>Admins</title>
-    <!-- ========== All CSS files linkup ========= -->
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./public/css/lineicons.css" />
-    <link rel="stylesheet" href="./public/css/quill/bubble.css" />
-    <link rel="stylesheet" href="./public/css/quill/snow.css" />
-    <link rel="stylesheet" href="./public/css/fullcalendar.css" />
-    <link rel="stylesheet" href="./public/css/morris.css" />
-    <link rel="stylesheet" href="./public/css/datatable.css" />
-    <link rel="stylesheet" href="./public/css/main.css" />
-</head>
-<!-- ======== Head end =========== -->
-
-<body>
-    <!-- ======== Preloader start =========== -->
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
-    <!-- ======== Preloader end =========== -->
-    <!-- ======== sidebar-nav start =========== -->
-    <aside id="zsidebar" class="sidebar-nav-wrapper">
-        <div class="navbar-logo">
-            <a href="index.html">
-                <img src="./public/images/logo.png" alt="logo" height="100">
-            </a>
+    <!-- ======== Head start =========== -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./public/images/logo.png" type="image/x-icon">
+        <title>Admins</title>
+        <!-- ========== All CSS files linkup ========= -->
+        <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./public/css/lineicons.css">
+        <link rel="stylesheet" href="./public/css/quill/bubble.css">
+        <link rel="stylesheet" href="./public/css/quill/snow.css">
+        <link rel="stylesheet" href="./public/css/fullcalendar.css">
+        <link rel="stylesheet" href="./public/css/morris.css">
+        <link rel="stylesheet" href="./public/css/datatable.css">
+        <link rel="stylesheet" href="./public/css/main.css">
+    </head>
+    <!-- ======== Head end =========== -->
+    <body>
+        <!-- ======== Preloader start =========== -->
+        <div id="preloader">
+            <div class="spinner"></div>
         </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <!--DASHBOARD-->
-                <li class="nav-item">
-                    <a href="./Index.html">
-                        <span class="lni lni-lg lni-dashboard"></span>
-                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</span>
-                    </a>
-                </li>
-                <!--USERS-->
-                <li class="nav-item nav-item-has-children active">
-                    <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_3" aria-controls="ddmenu_3" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="lni lni-users lni-lg"></span>
-                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Users</span>
-                    </a>
-                    <ul id="ddmenu_3" class="collapse dropdown-nav">
-                        <li>
-                            <a href="./Admins.html"> Admin</a>
-                        </li>
-                        <li>
-                            <a href="./Students.html"> Student</a>
-                        </li>
-                        <li>
-                            <a href="./Employees.html"> Employees</a>
-                        </li>
-                    </ul>
-                </li>
-                <!--COURSES-->
-                <li class="nav-item">
-                    <a href="./Courses.html">
-                        <span class="lni lni-library lni-lg"></span>
-                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Courses</span>
-                    </a>
-                </li>
-                <!--DIVIDER-->
-                <span class="divider">
+        <!-- ======== Preloader end =========== -->
+        <!-- ======== sidebar-nav start =========== -->
+        <aside id="zsidebar" class="sidebar-nav-wrapper">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="./public/images/logo.png" alt="logo" height="100">
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <!--DASHBOARD-->
+                    <li class="nav-item">
+                        <a href="./Index.html">
+                            <span class="lni lni-lg lni-dashboard"></span>
+                            <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</span>
+                        </a>
+                    </li>
+                    <!--USERS-->
+                    <li class="nav-item nav-item-has-children active">
+                        <a
+                            class="collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#ddmenu_3"
+                            aria-controls="ddmenu_3"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="lni lni-users lni-lg"></span>
+                            <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Users</span>
+                        </a>
+                        <ul id="ddmenu_3" class="collapse dropdown-nav">
+                            <li>
+                                <a href="./Admins.html"> Admin</a>
+                            </li>
+                            <li>
+                                <a href="./Students.html"> Student</a>
+                            </li>
+                            <li>
+                                <a href="./Employees.html"> Employees</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--COURSES-->
+                    <li class="nav-item">
+                        <a href="./Courses.html">
+                            <span class="lni lni-library lni-lg"></span>
+                            <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Courses</span>
+                        </a>
+                    </li>
+                    <!--DIVIDER-->
+                    <span class="divider">
                         <hr>
                     </span>
-                <!--POSTS-->
-                <li class="nav-item">
-                    <a href="./Posts.html">
-                        <span class="lni lni-postcard lni-lg"></span>
-                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Posts</span>
-                    </a>
-                </li>
-                <!--PODCASTS-->
-                <li class="nav-item">
-                    <a href="./podcasts.html">
-                        <span class="lni lni-spotify-original lni-lg"></span>
-                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Podcasts</span>
-                    </a>
-                </li>
-                <!--ANNOUNCMENTS-->
-                <li class="nav-item">
-                    <a href="./Announcments.html">
-                        <span class="lni lni-bullhorn lni-lg"></span>
-                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Announcments</span>
-                    </a>
-                </li>
-                <!--DIVIDER-->
-                <span class="divider">
+                    <!--POSTS-->
+                    <li class="nav-item">
+                        <a href="./Posts.html">
+                            <span class="lni lni-postcard lni-lg"></span>
+                            <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Posts</span>
+                        </a>
+                    </li>
+                    <!--PODCASTS-->
+                    <li class="nav-item">
+                        <a href="./podcasts.html">
+                            <span class="lni lni-spotify-original lni-lg"></span>
+                            <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Podcasts</span>
+                        </a>
+                    </li>
+                    <!--ANNOUNCMENTS-->
+                    <li class="nav-item">
+                        <a href="./Announcments.html">
+                            <span class="lni lni-bullhorn lni-lg"></span>
+                            <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;Announcments</span>
+                        </a>
+                    </li>
+                    <!--DIVIDER-->
+                    <span class="divider">
                         <hr>
                     </span>
-                <!--INFO_HUB-->
-                <li class="nav-item nav-item-has-children">
-                    <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_4" aria-controls="ddmenu_4" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="lni lni-information lni-lg"></span>
-                        <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;information Hub</span>
-                    </a>
-                    <ul id="ddmenu_4" class="collapse dropdown-nav">
-                        <li>
-                            <a href="./FAQ.html"> FAQ</a>
-                        </li>
-                        <li>
-                            <a href="./Inbox.html"> Inbox</a>
-                        </li>
-                        <li>
-                            <a href="./Banners.html"> Banners</a>
-                        </li>
-                        <li>
-                            <a href="./Links.html"> Links</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-    <div class="overlay"></div>
-    <!-- ======== sidebar-nav end =========== -->
-    <!-- ======== main-wrapper start =========== -->
-    <main class="main-wrapper">
-        <!-- ========== header start ========== -->
-        <header class="header">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-5 col-md-5 col-6">
-                        <div class="header-left d-flex align-items-center">
-                            <div class="menu-toggle-btn mr-15">
-                                <button id="menu-toggle" class="main-btn primary-btn btn-hover">
+                    <!--INFO_HUB-->
+                    <li class="nav-item nav-item-has-children">
+                        <a
+                            class="collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#ddmenu_4"
+                            aria-controls="ddmenu_4"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="lni lni-information lni-lg"></span>
+                            <span class="text">&nbsp;&nbsp;&nbsp;&nbsp;information Hub</span>
+                        </a>
+                        <ul id="ddmenu_4" class="collapse dropdown-nav">
+                            <li>
+                                <a href="./FAQ.html"> FAQ</a>
+                            </li>
+                            <li>
+                                <a href="./Inbox.html"> Inbox</a>
+                            </li>
+                            <li>
+                                <a href="./Banners.html"> Banners</a>
+                            </li>
+                            <li>
+                                <a href="./Links.html"> Links</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="overlay"></div>
+        <!-- ======== sidebar-nav end =========== -->
+        <!-- ======== main-wrapper start =========== -->
+        <main class="main-wrapper">
+            <!-- ========== header start ========== -->
+            <header class="header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-6">
+                            <div class="header-left d-flex align-items-center">
+                                <div class="menu-toggle-btn mr-15">
+                                    <button id="menu-toggle" class="main-btn primary-btn btn-hover">
                                         <i class="lni lni-chevron-left me-2"></i>
                                         Menu
                                     </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-6">
-                        <div class="header-right">
-                            <!-- profile start -->
-                            <div class="profile-box ml-15">
-                                <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="col-lg-7 col-md-7 col-6">
+                            <div class="header-right">
+                                <!-- profile start -->
+                                <div class="profile-box ml-15">
+                                    <button
+                                        class="dropdown-toggle bg-transparent border-0"
+                                        type="button"
+                                        id="profile"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
                                         <div class="profile-info">
                                             <div class="info">
                                                 <div class="image">
@@ -155,181 +173,187 @@
                                             </div>
                                         </div>
                                     </button>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
-                                    <li>
-                                        <div class="author-info flex items-center !p-1">
-                                            <div class="image">
-                                                <img src="./public/images/profile.png" alt="image">
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+                                        <li>
+                                            <div class="author-info flex items-center !p-1">
+                                                <div class="image">
+                                                    <img src="./public/images/profile.png" alt="image">
+                                                </div>
+                                                <div class="content">
+                                                    <h4 class="text-sm">Marwan Tamer</h4>
+                                                    <a class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white text-xs" href="#">Email@gmail.com</a>
+                                                </div>
                                             </div>
-                                            <div class="content">
-                                                <h4 class="text-sm">Marwan Tamer</h4>
-                                                <a class="text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white text-xs" href="#">Email@gmail.com</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="lni lni-user"></i> View Profile
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="lni lni-cog"></i> Settings
-                                        </a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#0">
-                                            <i class="lni lni-exit"></i> Sign Out
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- profile end -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ========== header end ========== -->
-        <!-- ========== section start ========== -->
-        <section class="section">
-            <div class="container-fluid">
-                <!-- ========== title-wrapper start ========== -->
-                <div id="notifications" class="notfmodal"></div>
-                <div class="title-wrapper pt-30">
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="title">
-                                <h2>Admins</h2>
-                            </div>
-                        </div>
-                        <!-- end col -->
-                        <div class="col-md-6">
-                            <div class="breadcrumb-wrapper">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item">
-                                            <a>Users</a>
                                         </li>
-                                        <li class="breadcrumb-item active" aria-current="page">
-                                            Admins
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="lni lni-user"></i>
+                                                View Profile
+                                            </a>
                                         </li>
-                                    </ol>
-                                </nav>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="lni lni-cog"></i>
+                                                Settings
+                                            </a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="#0">
+                                                <i class="lni lni-exit"></i>
+                                                Sign Out
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- profile end -->
                             </div>
                         </div>
-                        <!-- end col -->
                     </div>
-                    <!-- end row -->
                 </div>
-                <!-- ========== title-wrapper end ========== -->
-                <div class="row">
-                    <div class=" col-lg-4 col-sm-6">
-                        <div class="icon-card mb-30">
-                            <div class="icon purple">
-                                <i class="lni lni-users"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="mb-10">Total Admins</h6>
-                                <h3 id="tac" class="text-bold mb-10">0</h3>
-                            </div>
-                        </div>
-                        <!-- End Icon Cart -->
-                    </div>
-                    <!-- End Col -->
-                    <div class=" col-lg-4 col-sm-6">
-                        <div class="icon-card mb-30">
-                            <div class="icon success">
-                                <i class="lni lni-user"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="mb-10">Active Admins</h6>
-                                <h3 id="aa" class="text-bold mb-10">0</h3>
-                            </div>
-                        </div>
-                        <!-- End Icon Cart -->
-                    </div>
-                    <!-- End Col -->
-                    <div class=" col-lg-4 col-sm-6">
-                        <div class="icon-card mb-30">
-                            <div class="icon orange">
-                                <i class="lni lni-ban"></i>
-                            </div>
-                            <div class="content">
-                                <h6 class="mb-10">Inactive Admins</h6>
-                                <h3 id="ia" class="text-bold mb-10">0</h3>
-                            </div>
-                        </div>
-                        <!-- End Icon Cart -->
-                    </div>
-                    <!-- End Col -->
-                </div>
-                <!-- End Row -->
-                <!-- End Col -->
-                <div class="col-lg-12">
-                    <div class="card-style mb-30">
-                        <div class="title d-flex flex-wrap align-items-center justify-content-between">
-                            <div class="left">
-                                <div class=" d-md-flex table-search">
-                                    <form action="#">
-                                        <input type="search" id="search" placeholder="Search...">
-                                        <button>
-                                                <i class="lni lni-search-alt"></i>
-                                            </button>
-                                    </form>
+            </header>
+            <!-- ========== header end ========== -->
+            <!-- ========== section start ========== -->
+            <section class="section">
+                <div class="container-fluid">
+                    <!-- ========== title-wrapper start ========== -->
+                    <div id="notifications" class="notfmodal"></div>
+                    <div class="title-wrapper pt-30">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="title">
+                                    <h2>Admins</h2>
                                 </div>
                             </div>
-                            <div class="right">
-                                <button class="main-btn dark-btn btn-hover" data-bs-toggle="dropdown">
+                            <!-- end col -->
+                            <div class="col-md-6">
+                                <div class="breadcrumb-wrapper">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a>Users</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                Admins
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- ========== title-wrapper end ========== -->
+                    <div class="row">
+                        <div class=" col-lg-4 col-sm-6">
+                            <div class="icon-card mb-30">
+                                <div class="icon purple">
+                                    <i class="lni lni-users"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="mb-10">Total Admins</h6>
+                                    <h3 id="tac" class="text-bold mb-10">0</h3>
+                                </div>
+                            </div>
+                            <!-- End Icon Cart -->
+                        </div>
+                        <!-- End Col -->
+                        <div class=" col-lg-4 col-sm-6">
+                            <div class="icon-card mb-30">
+                                <div class="icon success">
+                                    <i class="lni lni-user"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="mb-10">Active Admins</h6>
+                                    <h3 id="aa" class="text-bold mb-10">0</h3>
+                                </div>
+                            </div>
+                            <!-- End Icon Cart -->
+                        </div>
+                        <!-- End Col -->
+                        <div class=" col-lg-4 col-sm-6">
+                            <div class="icon-card mb-30">
+                                <div class="icon orange">
+                                    <i class="lni lni-ban"></i>
+                                </div>
+                                <div class="content">
+                                    <h6 class="mb-10">Inactive Admins</h6>
+                                    <h3 id="ia" class="text-bold mb-10">0</h3>
+                                </div>
+                            </div>
+                            <!-- End Icon Cart -->
+                        </div>
+                        <!-- End Col -->
+                    </div>
+                    <!-- End Row -->
+                    <!-- End Col -->
+                    <div class="col-lg-12">
+                        <div class="card-style mb-30">
+                            <div class="title d-flex flex-wrap align-items-center justify-content-between">
+                                <div class="left">
+                                    <div class=" d-md-flex table-search">
+                                        <form action="#">
+                                            <input type="search" id="search" placeholder="Search...">
+                                            <button>
+                                                <i class="lni lni-search-alt"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <button class="main-btn dark-btn btn-hover" data-bs-toggle="dropdown">
                                         <i class="lni lni-exit-up"></i>
                                         Export
                                     </button>
-                                <ul class="dropdown-menu text-center">
-                                    <li>
-                                        <a href="">
-                                            <i class="lni lni-printer"></i> Print
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="lni lni-remove-file"></i> PDF
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="lni lni-printer"></i> Print
-                                        </a>
-                                    </li>
-                                </ul>
-                                <button class="main-btn primary-btn btn-hover" onclick="openAddPopupForm()">
+                                    <ul class="dropdown-menu text-center">
+                                        <li>
+                                            <a href="">
+                                                <i class="lni lni-printer"></i>
+                                                Print
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="lni lni-remove-file"></i>
+                                                PDF
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="lni lni-printer"></i>
+                                                Print
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <button class="main-btn primary-btn btn-hover" onclick="openAddPopupForm()">
                                         <i class="lni me-2 lni-plus"></i>
                                         Add Admin
                                     </button>
+                                </div>
                             </div>
-                        </div>
-                        <br>
-                        <!-- End Title -->
-                        <div class="table-responsive">
-                            <table id="mytable" class="table top-selling-table"></table>
-                            <!-- End Table -->
                             <br>
-                            <div class="title d-flex flex-wrap align-items-center justify-content-between">
-                                <div class="left" id="countdata"></div>
-                                <div class="right">
-                                    <!-- Pagination controls -->
-                                    <div class="pagination-container">
-                                        <ul class="pagination"></ul>
+                            <!-- End Title -->
+                            <div class="table-responsive">
+                                <table id="mytable" class="table top-selling-table"></table>
+                                <!-- End Table -->
+                                <br>
+                                <div class="title d-flex flex-wrap align-items-center justify-content-between">
+                                    <div class="left" id="countdata"></div>
+                                    <div class="right">
+                                        <!-- Pagination controls -->
+                                        <div class="pagination-container">
+                                            <ul class="pagination"></ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- End Col -->
                 </div>
-                <!-- End Col -->
-            </div>
-            <!-- End Row -->
+                <!-- End Row -->
             </div>
             <!-- end container -->
         </section>
@@ -341,10 +365,20 @@
                 <form method="post" action="/admin/user/add-admin">
                     <div class="popup-body">
                         <div class="form-group input-style-1">
-                            <input type="text" placeholder="Full Name" name="fullName" required>
+                            <input
+                                type="text"
+                                placeholder="Full Name"
+                                name="fullName"
+                                required
+                            >
                         </div>
                         <div class="form-group input-style-1">
-                            <input type="email" placeholder="Email" name="email" required>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                name="email"
+                                required
+                            >
                         </div>
                     </div>
                     <div class="popup-actions">
@@ -361,11 +395,21 @@
                 <div class="popup-body">
                     <div class="form-group input-style-1">
                         <label>Full Name</label>
-                        <input type="text" placeholder="Full Name" name="fullName" disabled>
+                        <input
+                            type="text"
+                            placeholder="Full Name"
+                            name="fullName"
+                            disabled
+                        >
                     </div>
                     <div class="form-group input-style-1">
                         <label>Email</label>
-                        <input type="email" placeholder="Email" name="email" disabled>
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            name="email"
+                            disabled
+                        >
                     </div>
                     <div class="select-style-1">
                         <label>Status</label>
@@ -394,7 +438,12 @@
                         </div>
                         <div class="form-group input-style-1">
                             <label>Email</label>
-                            <input type="email" placeholder="Email" name="email" disabled>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                name="email"
+                                disabled
+                            >
                         </div>
                         <div class="select-style-1">
                             <label>Status</label>
@@ -449,7 +498,19 @@
     <script src="./public/js/main.js"></script>
     <script src="./public/js/popup/admin.js"></script>
     <script>
-        let array = [];
+        let array = [
+        {
+            _id: "onfeefof[ck[wcwofwpp",
+            fullName: "test",
+            email: "test@example.com",
+            active: true
+        },
+        {
+            _id: "onfeefofwdpjwwofwpp",
+            fullName: "ahmed",
+            email: "ahmes@gmail.com",
+            active: false
+        }];
         let tarraycount = array.length;
         const pageSize = 7;
         let currentPage = 1;
@@ -638,5 +699,4 @@
         setupPagination(totalPages, currentPage);
     </script>
 </body>
-
 </html>
