@@ -1,33 +1,47 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic Page Needs
+================================================== -->
     <meta charset="utf-8" />
-    <title>Lecture 1</title>
+    <title>ICPC GU COMMUNITY</title>
+
+    <!-- Mobile Specific Metas
+================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="ICPC GU COMMUNITY" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
     />
 
-    <!-- Tab icon -->
-    <link rel="icon" type="image/png" href="./public/images/logo.png" />
+    <!-- Favicon
+================================================== -->
+    <link rel="icon" type="image/png" href="../public/images/favicon.png" />
 
-    <!-- CSS -->
+    <!-- CSS
+================================================== -->
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="public/plugins/bootstrap/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../public/plugins/bootstrap/bootstrap.min.css"
+    />
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="public/plugins/fontawesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="../public/plugins/fontawesome/css/all.min.css"
+    />
     <!-- Animation -->
-    <link rel="stylesheet" href="public/plugins/animate-css/animate.css" />
+    <link rel="stylesheet" href="../public/plugins/animate-css/animate.css" />
     <!-- slick Carousel -->
-    <link rel="stylesheet" href="public/plugins/slick/slick.css" />
-    <link rel="stylesheet" href="public/plugins/slick/slick-theme.css" />
+    <link rel="stylesheet" href="../public/plugins/slick/slick.css" />
+    <link rel="stylesheet" href="../public/plugins/slick/slick-theme.css" />
     <!-- Colorbox -->
-    <link rel="stylesheet" href="public/plugins/colorbox/colorbox.css" />
+    <link rel="stylesheet" href="../public/plugins/colorbox/colorbox.css" />
     <!-- Template styles-->
-    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
   </head>
-
   <body>
     <div class="body-inner">
       <div id="top-bar" class="top-bar">
@@ -49,26 +63,17 @@
                   <a
                     title="Facebook"
                     href="https://www.facebook.com/profile.php?id=61550299378856"
-                    target="_blank"
                   >
                     <span class="social-icon"
                       ><i class="fab fa-facebook-f"></i
                     ></span>
                   </a>
-                  <a
-                    title="Instagram"
-                    href="https://www.instagram.com/gu.icpc"
-                    target="_blank"
-                  >
+                  <a title="Instagram" href="https://www.instagram.com/gu.icpc">
                     <span class="social-icon"
                       ><i class="fab fa-instagram"></i
                     ></span>
                   </a>
-                  <a
-                    title="Github"
-                    href="https://github.com/icpcgu"
-                    target="_blank"
-                  >
+                  <a title="Github" href="https://github.com/icpcgu">
                     <span class="social-icon"
                       ><i class="fab fa-github"></i
                     ></span>
@@ -93,12 +98,8 @@
                 <div
                   class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0"
                 >
-                  <a class="d-block" href="./index.html" target="_blank">
-                    <img
-                      loading="lazy"
-                      src="public/images/logo.png"
-                      alt="Constra"
-                    />
+                  <a class="d-block" href="/">
+                    <img loading="lazy" src="../public/images/logo.png" alt="Constra" />
                   </a>
                 </div>
                 <!-- logo end -->
@@ -122,9 +123,7 @@
                       </div>
                     </li>
                     <li class="header-get-a-quote">
-                      <a class="btn btn-primary" href="./contact.html"
-                        >CONTACT US</a
-                      >
+                      <a class="btn btn-primary" href="/contact">CONTACT US</a>
                     </li>
                   </ul>
                   <!-- Ul end -->
@@ -158,43 +157,43 @@
                   <div id="navbar-collapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav mr-auto">
                       <li class="nav-item">
-                        <a href="./index.html" class="nav-link" target="_blank"
-                          >Home <i class="fa"></i
-                        ></a>
+                        <a href="/" class="nav-link">Home <i class="fa"></i></a>
                       </li>
 
-                      <li class="nav-item active">
+                      <li class="nav-item dropdown">
                         <a
-                          href="./courses.html"
-                          class="nav-link"
-                          target="_blank"
-                          >Courses <i class="fa"></i
+                          href="/training"
+                          class="nav-link dropdown-toggle"
+                          data-toggle="dropdown"
+                          >Training <i class="fa fa-angle-down"></i
                         ></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="/training/level1">Level 1</a></li>
+                          <li><a href="/training/level2">Level 2</a></li>
+                          <li><a href="/training/level3">Level 3</a></li>
+                        </ul>
                       </li>
 
                       <li class="nav-item">
-                        <a href="./posts.html" class="nav-link" target="_blank"
+                        <a href="/posts" class="nav-link"
                           >Posts <i class="fa"></i
                         ></a>
                       </li>
 
-                      <li class="nav-item">
-                        <a href="./podcast.html" class="nav-link" target="_blank"
+                      <li class="nav-item active">
+                        <a href="/podcast" class="nav-link"
                           >Podcast <i class="fa"></i
                         ></a>
                       </li>
 
                       <li class="nav-item">
-                        <a
-                          href="./our team.html"
-                          class="nav-link"
-                          target="_blank"
+                        <a href="/team" class="nav-link"
                           >Our Team <i class="fa"></i
                         ></a>
                       </li>
 
                       <li class="nav-item">
-                        <a href="./faq.html" class="nav-link" target="_blank"
+                        <a href="/FAQ" class="nav-link"
                           >FAQ <i class="fa"></i
                         ></a>
                       </li>
@@ -215,109 +214,20 @@
       <section id="main-container" class="main-container">
         <div class="container">
           <div class="row">
-            <div class="col-xl-3 col-lg-4">
-              <div class="sidebar sidebar-left">
-                <div class="widget">
-                  <h3 class="widget-title">Videos</h3>
-                  <ul class="nav service-menu">
-                    <li class="active">
-                      <a href="/training/level1/1" target="_blank">Lecture 1</a>
-                    </li>
-                    <li>
-                      <a href="/training/level1/2" target="_blank">Lecture 2</a>
-                    </li>
-                    <li>
-                      <a href="/training/level1/3" target="_blank">Lecture 3</a>
-                    </li>
-                    <li>
-                      <a href="/training/level1/4" target="_blank">Lecture 4</a>
-                    </li>
-                  </ul>
+            <div class="col-12">
+              <div class="error-page text-center">
+                <div class="error-code">
+                  <h2>COMING SOON</h2>
                 </div>
-                <!-- Widget end -->
-                <!-- Widget end -->
+                <div class="error-body">
+                  <a href="/" class="btn btn-primary"
+                    >Back to Home Page</a
+                  >
+                </div>
               </div>
-              <!-- Sidebar end -->
             </div>
-            <!-- Sidebar Col end -->
-
-            <div class="col-xl-8 col-lg-8">
-              <div class="content-inner-page">
-                <h2 class="column-title mrt-0">Introduction</h2>
-
-                <div class="gap-40"></div>
-
-                <div class="item card-body">
-                  <iframe
-                    class="card-img"
-                    width="750"
-                    height="400"
-                    src="https://www.youtube.com/embed/O08pJxO2_Ok?si=lXueNXk4CnwDqGgO"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-
-                <blockquote class="blockquote">
-                  <h5>Links</h5>
-                  <p>
-                    <strong class="text-success"
-                      ><a href="./podcast.html" target="_blank">-Slides</a></strong
-                    >
-                  </p>
-                  <p>
-                    <strong class="text-success"
-                      ><a href="./podcast.html" target="_blank">-Sheet Solution</a></strong
-                    >
-                  </p>
-                </blockquote>
-
-                <blockquote class="blockquote">
-                  <h5>Search words</h5>
-                  <p>
-                    <mark>C++ Compiler</mark> <mark>C++ Namespace</mark>
-                    <mark>How C++ Work</mark> <mark>C++ Variables</mark>
-                  </p>
-                  <br />
-                  <p><mark>C++ Operators</mark> <mark>C++ Data Types</mark></p>
-                </blockquote>
-                <!-- Page slider end -->
-
-                <div class="gap-40"></div>
-
-                <div class="call-to-action classic">
-                  <div class="row align-items-center">
-                    <div class="col-md-8 text-center text-md-left">
-                      <div class="call-to-action-text">
-                        <h3 class="action-title">Solve Sheet 1</h3>
-                      </div>
-                    </div>
-                    <!-- Col end -->
-                    <div
-                      class="col-md-4 text-center text-md-right mt-3 mt-md-0"
-                    >
-                      <div class="call-to-action-btn">
-                        <a
-                          class="btn btn-primary"
-                          href="https://vjudge.net/group/gu-icpc-community-level-1"
-                          target="_blank"
-                          >Solve Now</a
-                        >
-                      </div>
-                    </div>
-                    <!-- col end -->
-                  </div>
-                  <!-- row end -->
-                </div>
-                <!-- Action end -->
-              </div>
-              <!-- Content inner end -->
-            </div>
-            <!-- Content Col end -->
           </div>
-          <!-- Main row end -->
+          <!-- Content row -->
         </div>
         <!-- Conatiner end -->
       </section>
@@ -335,20 +245,20 @@
                       document.write(new Date().getFullYear());
                     </script>
                     , Developed by
-                    <a href="./our team.html">ICPC GU Team</a>
-                  </span>
+                    <a href="/team">ICPC GU Team</a></span
+                  >
                 </div>
               </div>
 
               <div class="col-md-6">
                 <div class="footer-menu text-center text-md-right">
                   <ul class="list-unstyled">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./courses.html">Courses</a></li>
-                    <li><a href="./posts.html">Posts</a></li>
-                    <li><a href="./podcast.html">Podcast</a></li>
-                    <li><a href="./our team.html">Our Team</a></li>
-                    <li><a href="./faq.html">Faq</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/training">Training</a></li>
+                    <li><a href="/posts">Posts</a></li>
+                    <li><a href="/podcast">Podcast</a></li>
+                    <li><a href="/team">Our Team</a></li>
+                    <li><a href="/FAQ">Faq</a></li>
                   </ul>
                 </div>
               </div>
@@ -372,25 +282,26 @@
       </footer>
       <!-- Footer end -->
 
-      <!-- Javascript Files-->
+      <!-- Javascript Files
+  ================================================== -->
 
       <!-- initialize jQuery Library -->
-      <script src="./public/plugins/jQuery/jquery.min.js"></script>
+      <script src="../public/plugins/jQuery/jquery.min.js"></script>
       <!-- Bootstrap jQuery -->
-      <script src="./public/plugins/bootstrap/bootstrap.min.js" defer></script>
+      <script src="../public/plugins/bootstrap/bootstrap.min.js" defer></script>
       <!-- Slick Carousel -->
-      <script src="./public/plugins/slick/slick.min.js"></script>
-      <script src="./public/plugins/slick/slick-animation.min.js"></script>
+      <script src="../public/plugins/slick/slick.min.js"></script>
+      <script src="../public/plugins/slick/slick-animation.min.js"></script>
       <!-- Color box -->
-      <script src="./public/plugins/colorbox/jquery.colorbox.js"></script>
+      <script src="../public/plugins/colorbox/jquery.colorbox.js"></script>
       <!-- shuffle -->
-      <script src="./public/plugins/shuffle/shuffle.min.js" defer></script>
+      <script src="../public/plugins/shuffle/shuffle.min.js" defer></script>
 
       <!-- Google Map Plugin-->
-      <script src="./public/plugins/google-map/map.js" defer></script>
+      <script src="../public/plugins/google-map/map.js" defer></script>
 
       <!-- Template custom -->
-      <script src="./public/js/script.js"></script>
+      <script src="../public/js/script.js"></script>
     </div>
     <!-- Body inner end -->
   </body>
